@@ -23,6 +23,8 @@ namespace UnamiSushi.Models
 
         public virtual ICollection<MenuPicture> ItemGallery { get; set; }
 
+        public virtual ICollection<MenuPicture> ItemComments { get; set; }
+
 
     }
 }
