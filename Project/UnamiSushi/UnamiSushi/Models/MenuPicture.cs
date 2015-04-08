@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,6 +8,7 @@ namespace UnamiSushi.Models
 {
     public class MenuPicture
     {
+        [Key]
         public int PictureID { get; set; } //Primary key 
 
         public int MenuItemID { get; set; } //Foreign key to menu item ID

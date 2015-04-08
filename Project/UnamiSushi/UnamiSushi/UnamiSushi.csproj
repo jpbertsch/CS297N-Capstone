@@ -159,8 +159,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MenuCategoryController.cs" />
+    <Compile Include="Controllers\MenuItemController.cs" />
+    <Compile Include="Controllers\MenuPictureController.cs" />
+    <Compile Include="Controllers\ReplyController.cs" />
     <Compile Include="DAL\PrimaryContext.cs" />
     <Compile Include="DAL\PrototypeInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -236,6 +241,31 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\MenuCategory\Create.cshtml" />
+    <Content Include="Views\MenuCategory\Delete.cshtml" />
+    <Content Include="Views\MenuCategory\Details.cshtml" />
+    <Content Include="Views\MenuCategory\Edit.cshtml" />
+    <Content Include="Views\MenuCategory\Index.cshtml" />
+    <Content Include="Views\MenuItem\Create.cshtml" />
+    <Content Include="Views\MenuItem\Delete.cshtml" />
+    <Content Include="Views\MenuItem\Details.cshtml" />
+    <Content Include="Views\MenuItem\Edit.cshtml" />
+    <Content Include="Views\MenuItem\Index.cshtml" />
+    <Content Include="Views\MenuPicture\Create.cshtml" />
+    <Content Include="Views\MenuPicture\Delete.cshtml" />
+    <Content Include="Views\MenuPicture\Details.cshtml" />
+    <Content Include="Views\MenuPicture\Edit.cshtml" />
+    <Content Include="Views\MenuPicture\Index.cshtml" />
+    <Content Include="Views\Comment\Create.cshtml" />
+    <Content Include="Views\Comment\Delete.cshtml" />
+    <Content Include="Views\Comment\Details.cshtml" />
+    <Content Include="Views\Comment\Edit.cshtml" />
+    <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Reply\Create.cshtml" />
+    <Content Include="Views\Reply\Delete.cshtml" />
+    <Content Include="Views\Reply\Details.cshtml" />
+    <Content Include="Views\Reply\Edit.cshtml" />
+    <Content Include="Views\Reply\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,42 @@
+﻿@model UnamiSushi.Models.MenuPicture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MenuPicture</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PictureItem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureItem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PicturePathname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PicturePathname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThumbnailPathname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThumbnailPathname)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PictureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

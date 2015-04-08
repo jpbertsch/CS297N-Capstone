@@ -50,6 +50,5 @@ C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\b
 C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.csprojResolveAssemblyReference.cache
 C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.dll
 C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.pdb
