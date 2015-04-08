@@ -9,7 +9,7 @@ namespace UnamiSushi.Models
     {
         public int MenuItemID { get; set; } //Primary Key
 
-        public string MenuItemCategory { get; set; } //Foreign key to category menu items belongs to
+        public string CategoryName { get; set; } //Foreign key to category menu items belongs to
 
         public string MenuItemName { get; set; } //Short name of the particular dish
 
