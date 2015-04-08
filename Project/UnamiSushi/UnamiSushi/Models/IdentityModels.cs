@@ -18,6 +18,7 @@ namespace UnamiSushi.Models
         }
     }
 
+    
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
@@ -30,4 +31,5 @@ namespace UnamiSushi.Models
             return new ApplicationDbContext();
         }
     }
+    
 }

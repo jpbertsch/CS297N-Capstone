@@ -1,0 +1,45 @@
+﻿@model IEnumerable<UnamiSushi.Models.MenuPicture>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PictureItem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PicturePathname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThumbnailPathname)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureItem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PicturePathname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThumbnailPathname)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PictureID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PictureID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PictureID })
+        </td>
+    </tr>
+}
+
+</table>
