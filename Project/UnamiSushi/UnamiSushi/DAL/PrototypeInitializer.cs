@@ -39,9 +39,9 @@ namespace UnamiSushi.DAL
                 new MenuPicture{MenuItemID=1, PicturePathname="~/Images/Normal/picturename1.jpg", 
                                 ThumbnailPathname="~/Images/Thumbnail/pictur1.jpg"},
                 new MenuPicture{MenuItemID=2, PicturePathname="~/Images/Normal/picturename2.jpg",
-                                ThumbnailPathname="~/Images/Normal/Thumbnail/pictur1.jpg"},
+                                ThumbnailPathname="~/Images/Thumbnail/pictur1.jpg"},
                 new MenuPicture{MenuItemID=3, PicturePathname="~/Images/Normal/picturename3.jpg",
-                                ThumbnailPathname="~/Images/Normal/Thumbnail/pictur3.jpg"},
+                                ThumbnailPathname="~/Images/Thumbnail/pictur3.jpg"},
             };
             menuPictures.ForEach(s => context.MenuPictures.Add(s));
             context.SaveChanges();
