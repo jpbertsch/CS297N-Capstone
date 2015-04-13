@@ -11,7 +11,9 @@ namespace UnamiSushi.Models
         [Key]
         public int MenuItemID { get; set; } //Primary Key
 
-        public string CategoryName { get; set; } //Foreign key to category menu items belongs to
+        public int CategoryID { get; set; } //foreign key
+        
+        public string CategoryName { get; set; }
 
         public string MenuItemName { get; set; } //Short name of the particular dish
 

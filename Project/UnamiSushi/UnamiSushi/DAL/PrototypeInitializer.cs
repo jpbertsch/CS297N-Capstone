@@ -21,13 +21,13 @@ namespace UnamiSushi.DAL
 
             var menuItems = new List<MenuItem>
             {
-                new MenuItem{CategoryName="Sushi Burrito", MenuItemName="Califronia", 
+                new MenuItem{CategoryID=1, CategoryName="Sushi Burrito", MenuItemName="Califronia", 
                 MenuItemDescription="Surimi crab, avocado, cream cheese, cucumber, tempura flakes, carrot, seaweed salad, sweet soy reduction",
                 MenuItemPrice= 8.95},
-                new MenuItem{CategoryName="Sushi Burrito", MenuItemName="Neptune", 
+                new MenuItem{CategoryID=1, CategoryName="Sushi Burrito", MenuItemName="Neptune", 
                 MenuItemDescription="Tempura calamri, spicy cream cheese, avacado, cucumber, tempura flakes, shredded carrot, seaweed salad, spicy sauce, sweet soy reduction",
                 MenuItemPrice= 10.95},
-                new MenuItem{CategoryName="Sushi Burrito", MenuItemName="Spicy Tuna", 
+                new MenuItem{CategoryID=1, CategoryName="Sushi Burrito", MenuItemName="Spicy Tuna", 
                 MenuItemDescription="Avacado, cucumber, spicey tuna, tempura flakes, carrot, seaweed salad, spicy sauce, sweet soy reduction",
                 MenuItemPrice= 12.95}
             };
