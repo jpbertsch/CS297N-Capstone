@@ -11,11 +11,11 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PictureItem)
+            @Html.DisplayNameFor(model => model.MenuItemID)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PictureItem)
+            @Html.DisplayFor(model => model.MenuItemID)
         </dd>
 
         <dt>
@@ -23,7 +23,8 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PicturePathname)
+            @*@Html.DisplayFor(model => model.PicturePathname)*@
+            <img src="@Url.Content(@Model.PicturePathname)" height="300" width="400" />
         </dd>
 
         <dt>

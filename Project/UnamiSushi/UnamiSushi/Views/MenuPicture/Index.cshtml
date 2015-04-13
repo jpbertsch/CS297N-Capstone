@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<UnamiSushi.Models.MenuPicture>
 
+
 @{
     ViewBag.Title = "Index";
 }
@@ -30,6 +31,7 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PicturePathname)
+            <img src="@Url.Content(item.PicturePathname)" height="150" width="200" />
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.ThumbnailPathname)

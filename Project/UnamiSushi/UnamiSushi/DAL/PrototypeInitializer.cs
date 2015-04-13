@@ -36,12 +36,12 @@ namespace UnamiSushi.DAL
 
             var menuPictures = new List<MenuPicture>
             {
-                new MenuPicture{MenuItemID=1, PicturePathname="~/Images/Normal/picturename1.jpg", 
-                                ThumbnailPathname="~/Images/Thumbnail/pictur1.jpg"},
-                new MenuPicture{MenuItemID=2, PicturePathname="~/Images/Normal/picturename2.jpg",
-                                ThumbnailPathname="~/Images/Thumbnail/pictur1.jpg"},
-                new MenuPicture{MenuItemID=3, PicturePathname="~/Images/Normal/picturename3.jpg",
-                                ThumbnailPathname="~/Images/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/SushiRoll1.jpg", 
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
+                new MenuPicture{MenuItemID=2, PicturePathname="~/Photos/Normal/SushiRoll2.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
+                new MenuPicture{MenuItemID=3, PicturePathname="~/Photos/Normal/SushiRoll3.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
             };
             menuPictures.ForEach(s => context.MenuPictures.Add(s));
             context.SaveChanges();
