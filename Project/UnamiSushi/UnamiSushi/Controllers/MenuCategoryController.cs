@@ -28,7 +28,7 @@ namespace UnamiSushi.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MenuCategory menuCategory = db.MenuCategories.Find(id);
+            MenuCategory menuCategory = db.MenuCategories.Include(MenuItems).Include(ItemGallery).Find(id); //Needs confirmation
             if (menuCategory == null)
             {
                 return HttpNotFound();
