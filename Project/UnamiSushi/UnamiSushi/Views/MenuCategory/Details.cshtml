@@ -19,11 +19,16 @@
     <dl class="dl-vertical">
         @foreach (var item in Model.MenuItems)
         {
-            
-            @*string imageString = item.ItemGallery.FirstOrDefault().PicturePathname; 
-            <img src="@imageString" alt="image" />*@
-            
-            
+            <div>    
+                @*string imageString = item.ItemGallery.FirstOrDefault().PicturePathname; 
+                <img src="@imageString" alt="image" width="200" height="150" />*@
+                
+                @Html.DisplayFor(item => item.MenuItemName)
+                
+                @Html.DisplayFor(item => item.MenuItemDescription)
+                
+                @Html.DisplayFor(item => item.MenuItemPrice)
+            </div>
         }
     </dl>
 </div>
