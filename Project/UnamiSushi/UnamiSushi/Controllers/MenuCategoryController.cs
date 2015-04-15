@@ -28,7 +28,20 @@ namespace UnamiSushi.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MenuCategory menuCategory = db.MenuCategories.Include(MenuItems).Include(ItemGallery).Find(id); //Needs confirmation
+
+            //MenuCategory menuCategory = db.MenuCategories.Find(id); //Working original code
+
+            //MenuCategory menuCategory = db.MenuCategories.Include(i => i.MenuItems.Select(x => x.ItemGallery).First()).Find(id); //Needs confirmation
+            //var menuQuery = db.MenuCategories.Include(i => i.MenuItems.Select(x => x.ItemGallery)); //Needs confirmation
+            //MenuCategory menuCategory = db.MenuCategories.Find()
+
+            //var MenuCategories = db.MenuCategories.Include(i => i.MenuItems.Select(x => x.ItemGallery.Select(y => y.PicturePathname)));
+            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
+            var itemGallery = db.MenuItems.First().MenuPictures;
+            //var MenuCategories = db.MenuCategories.Include();
+
+            MenuCategory menuCategory = (from c in menuCategories where c.CategoryID == id select c).FirstOrDefault();
+
             if (menuCategory == null)
             {
                 return HttpNotFound();

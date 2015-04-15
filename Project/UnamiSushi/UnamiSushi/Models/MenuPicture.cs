@@ -10,7 +10,6 @@ namespace UnamiSushi.Models
     {
         [Key]
         public int PictureID { get; set; } //Primary key 
-
         public int MenuItemID { get; set; } //Foreign key to menu item ID
 
         //public string PictureName { get; set; } //Name of picture

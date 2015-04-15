@@ -107,3 +107,4 @@ C:\Users\Irvin\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\bi
 C:\Users\Irvin\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.csprojResolveAssemblyReference.cache
 C:\Users\Irvin\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.dll
 C:\Users\Irvin\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.pdb
+C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.csprojResolveAssemblyReference.cache

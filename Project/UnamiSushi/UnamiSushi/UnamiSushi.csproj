@@ -189,6 +189,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Photos\Normal\SushiRoll1.JPG" />
+    <Content Include="Photos\Normal\SushiRoll2.JPG" />
+    <Content Include="Photos\Normal\SushiRoll3.JPG" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

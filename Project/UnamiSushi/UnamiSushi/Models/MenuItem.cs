@@ -25,9 +25,9 @@ namespace UnamiSushi.Models
         //public string ThumbnailPathname { get; set; } 
 
 
-        public virtual ICollection<MenuPicture> ItemGallery { get; set; }
+        public virtual ICollection<MenuPicture> MenuPictures { get; set; }
 
-        public virtual ICollection<MenuPicture> ItemComments { get; set; }
+        public virtual ICollection<Comment> ItemComments { get; set; }
 
 
     }

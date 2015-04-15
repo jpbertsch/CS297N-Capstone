@@ -1,5 +1,6 @@
 ﻿@model UnamiSushi.Models.MenuCategory
 
+
 @{
     ViewBag.Title = "Details";
 }
@@ -19,16 +20,20 @@
     <dl class="dl-vertical">
         @foreach (var item in Model.MenuItems)
         {
-            <div>    
-                @*string imageString = item.ItemGallery.FirstOrDefault().PicturePathname; 
-                <img src="@imageString" alt="image" width="200" height="150" />*@
+                string imageString = item.MenuPictures.First().PicturePathname; 
+
+                //string imageString = "/Photos/Normal/SushiRoll1.jpg";
+            
+                <img src="@Url.Content(imageString)" alt="image" width="200" height="150" />
                 
-                @Html.DisplayFor(item => item.MenuItemName)
+                @item.MenuItemName 
                 
-                @Html.DisplayFor(item => item.MenuItemDescription)
                 
-                @Html.DisplayFor(item => item.MenuItemPrice)
-            </div>
+            
+                @item.MenuItemPrice 
+            
+                <br />
+            
         }
     </dl>
 </div>
