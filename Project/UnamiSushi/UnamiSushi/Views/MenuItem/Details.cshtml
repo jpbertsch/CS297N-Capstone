@@ -11,10 +11,10 @@
     <hr />
     <dl class="dl-horizontal">
     
-        @*
-        <dt> @Html.DisplayNameFor(model => model.CategoryName) </dt>
-        <dd> @Html.DisplayFor(model => model.CategoryName) </dd>
-        *@
+        
+        @*<dt> @Html.DisplayNameFor(model => model.CategoryName) </dt>
+        <dd> @Html.DisplayFor(model => model.CategoryName) </dd>*@
+        
         
         @Html.DisplayFor(model => model.MenuItemName)
 
@@ -22,19 +22,20 @@
 
         @Html.DisplayFor(model => model.MenuItemPrice)
 
-    @*
-    @foreach (var item in Model.ItemComments)
+    
+    @*@foreach (var item in Model.ItemComments)
     {
         <div>
         
         <img src="@imageString" alt="image" width="200" height="150" />*@
-        @Html.DisplayFor(item => item.UserID)
+
+        @*@Html.DisplayFor(item => item.UserID)
         @Html.DisplayFor(item => item.CommentDate)
-        @Html.DisplayFor(item => item.CommentContents)
+        @Html.DisplayFor(item => item.CommentContents)*@
         
         </div>
     }
-    *@
+    
 
     </dl>
 </div>
