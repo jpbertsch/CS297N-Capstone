@@ -16,5 +16,7 @@ namespace UnamiSushi.Models
         public DateTime CommentDate { get; set; } //Date comment was made
 
         public string CommentContents { get; set; } //The users comment
+
+        public virtual ICollection<Reply> Replys { get; set; }
     }
 }

@@ -28,7 +28,12 @@ namespace UnamiSushi.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MenuItem menuItem = db.MenuItems.Find(id);
+
+            //var menuItems = db.MenuItems.Include("Comments").Include("Comments.Replys");
+            var menuItems = db.MenuItems.Include("Comments");
+            //MenuItem menuItem = db.MenuItems.Find(id);
+            MenuItem menuItem = (from i in menuItems where i.MenuItemID == id select i).FirstOrDefault();
+
             if (menuItem == null)
             {
                 return HttpNotFound();

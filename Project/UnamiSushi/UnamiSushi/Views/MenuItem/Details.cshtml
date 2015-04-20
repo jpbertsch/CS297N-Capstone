@@ -11,6 +11,7 @@
     <hr />
     <dl class="dl-horizontal">
     
+        <img src="@Url.Content(Model.MenuPictures.First().PicturePathname)" alt="image" width="200" height="150" />
         
         @*<dt> @Html.DisplayNameFor(model => model.CategoryName) </dt>
         <dd> @Html.DisplayFor(model => model.CategoryName) </dd>*@
@@ -23,21 +24,28 @@
         @Html.DisplayFor(model => model.MenuItemPrice)
 
     
-    @*@foreach (var item in Model.ItemComments)
+    @foreach (var comment in Model.Comments)
     {
-        <div>
-        
-        <img src="@imageString" alt="image" width="200" height="150" />*@
+        <div class="Comment_Box" style="border: solid 1px; margin: 2px;">
 
-        @*@Html.DisplayFor(item => item.UserID)
-        @Html.DisplayFor(item => item.CommentDate)
-        @Html.DisplayFor(item => item.CommentContents)*@
-        
+            @comment.UserID
+            @comment.CommentDate
+            @comment.CommentContents
+
         </div>
+        
+        foreach (var reply in comment.Replys)
+        {
+            <div class="Reply_Box" style="border: dotted 1px; margin: 2px; margin-left: 20px;">
+                @reply.UserID)
+                @reply.ReplyDate)
+                @reply.ReplyContents)
+            </div>
+        }   
     }
-    
 
-    </dl>
+
+</dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MenuItemID }) |

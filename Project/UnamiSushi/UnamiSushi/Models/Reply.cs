@@ -13,8 +13,9 @@ namespace UnamiSushi.Models
 
         public int UserID { get; set; } //Foreign key identifier for replying user
 
-        public DateTime CommentDate { get; set; } //Date reply was made
+        public DateTime ReplyDate { get; set; } //Date reply was made
 
-        public string CommentContents { get; set; } //The users reply
+        public string ReplyContents { get; set; } //The users reply
+
     }
 }

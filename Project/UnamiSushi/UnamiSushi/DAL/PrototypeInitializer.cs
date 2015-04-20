@@ -6,7 +6,8 @@ using UnamiSushi.Models;
 
 namespace UnamiSushi.DAL
 {
-    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<PrimaryContext>
+    //public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<PrimaryContext>
+    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseAlways<PrimaryContext>
     {
         protected override void Seed(PrimaryContext context)
         {
@@ -46,24 +47,23 @@ namespace UnamiSushi.DAL
             menuPictures.ForEach(s => context.MenuPictures.Add(s));
             context.SaveChanges();
 
-            var replies = new List<Reply>
-            {
-                new Reply{CommentID=1, UserID=4, CommentDate=DateTime.Parse("2015-04-15"), CommentContents="OWWWAHAKDJKSLDHLK"},
-                new Reply{CommentID=2, UserID=5, CommentDate=DateTime.Parse("2015-03-15"), CommentContents="Tis da bomb diggity"},
-                new Reply{CommentID=3, UserID=6, CommentDate=DateTime.Parse("2015-01-12"), CommentContents="Burrito Sushi say whaaa?"}
-            };
-            replies.ForEach(s => context.Replies.Add(s));
-            context.SaveChanges();
-
             var comments = new List<Comment>
             {
-                new Comment{MenuItemID=1, UserID=1, CommentDate=DateTime.Parse("2014-12-28"), CommentContents="OMGGGGG"},
-                new Comment{MenuItemID=1, UserID=2, CommentDate=DateTime.Parse("2015-04-07"), CommentContents="This changed my life forever"},
-                new Comment{MenuItemID=1, UserID=3, CommentDate=DateTime.Parse("2015-02-21"), CommentContents="Defintely coming back here for more!"},
+                new Comment{CommentID=1, MenuItemID=1, UserID=1, CommentDate=DateTime.Parse("2014-12-28"), CommentContents="OMGGGGG"},
+                new Comment{CommentID=2, MenuItemID=1, UserID=2, CommentDate=DateTime.Parse("2015-04-07"), CommentContents="This changed my life forever"},
+                new Comment{CommentID=3, MenuItemID=1, UserID=3, CommentDate=DateTime.Parse("2015-02-21"), CommentContents="Defintely coming back here for more!"},
             };
             comments.ForEach(s => context.Comments.Add(s));
             context.SaveChanges();
 
+            var replies = new List<Reply>
+            {
+                new Reply{CommentID=1, UserID=1, ReplyDate=DateTime.Parse("2015-04-15"), ReplyContents="OWWWAHAKDJKSLDHLK"},
+                new Reply{CommentID=2, UserID=2, ReplyDate=DateTime.Parse("2015-03-15"), ReplyContents="Tis da bomb diggity"},
+                new Reply{CommentID=3, UserID=3, ReplyDate=DateTime.Parse("2015-01-12"), ReplyContents="Burrito Sushi say whaaa?"}
+            };
+            replies.ForEach(s => context.Replies.Add(s));
+            context.SaveChanges();
 
         }
     }
