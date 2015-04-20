@@ -48,9 +48,9 @@ namespace UnamiSushi.DAL
 
             var replies = new List<Reply>
             {
-                new Reply{CommentID=1, UserID=1, CommentDate=DateTime.Parse("2015-04-15"), CommentContents="OWWWAHAKDJKSLDHLK"},
-                new Reply{CommentID=2, UserID=2, CommentDate=DateTime.Parse("2015-03-15"), CommentContents="Tis da bomb diggity"},
-                new Reply{CommentID=3, UserID=3, CommentDate=DateTime.Parse("2015-01-12"), CommentContents="Burrito Sushi say whaaa?"}
+                new Reply{CommentID=1, UserID=1, MenuItemID=1, CommentDate=DateTime.Parse("2015-04-15"), CommentContents="OWWWAHAKDJKSLDHLK"},
+                new Reply{CommentID=2, UserID=2, MenuItemID=1, CommentDate=DateTime.Parse("2015-03-15"), CommentContents="Tis da bomb diggity"},
+                new Reply{CommentID=3, UserID=3, MenuItemID=1, CommentDate=DateTime.Parse("2015-01-12"), CommentContents="Burrito Sushi say whaaa?"}
             };
             replies.ForEach(s => context.Replies.Add(s));
             context.SaveChanges();
