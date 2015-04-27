@@ -15,16 +15,34 @@ namespace UnamiSushi.Controllers
         {
             return View();
         }
-        public ActionResult Partial()
-        {
-            return View();
-        }
+        
+        //Partial View Test
+        //public ActionResult Partial()
+        //{
+        //    return View();
+        //}
         public ActionResult Menu()
         {
             return View(db.MenuCategories.ToList());
         }
 
-        
+        public ActionResult SushidoPV()
+        {
+            return View();
+        }
+
+        public ActionResult SushiRollsPV()
+        {
+            return View();
+        }
+        public ActionResult AppetizersPV()
+        {
+            return View();
+        }
+        public ActionResult AsianGrillPV()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

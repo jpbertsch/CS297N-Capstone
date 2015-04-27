@@ -287,6 +287,10 @@
     <Content Include="Views\Reply\Index.cshtml" />
     <Content Include="Views\Home\Menu.cshtml" />
     <Content Include="Views\Home\Partial.cshtml" />
+    <Content Include="Views\Home\SushidoPV.cshtml" />
+    <Content Include="Views\Home\SushiRollPV.cshtml" />
+    <Content Include="Views\Home\AppetizerPV.cshtml" />
+    <Content Include="Views\Home\AsianGrillPV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
