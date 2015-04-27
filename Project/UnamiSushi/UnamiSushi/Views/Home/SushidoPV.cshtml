@@ -1,4 +1,4 @@
-﻿@model IEnumerable<UnamiSushi.Models.MenuCategory>
+﻿@model IEnumerable<UnamiSushi.Models.MenuViewModel>
 @using UnamiSushi.Models
 
 
@@ -9,13 +9,10 @@
             <thead>
                 <tr>
                     <th>
-                        CategoryID
-                    </th>
-                    <th>
                         CategoryName
                     </th>
                     <th>
-                        CategoryDescription
+                        MenuItemName
                     </th>
 
                 </tr>
@@ -25,14 +22,14 @@
                 {
                     <tr>
                         <td align="left">
-                            @item.CategoryID
+                            @Html.DisplayFor(modelItem => item.CategoryName)
                         </td>
+                        @for (int i = 0; i < item.MenuItemName.Count; i++)
+                        {    
                         <td align="left">
-                            @item.CategoryName
+                            @Html.DisplayFor(modelItem => item.MenuItemName[i])
                         </td>
-                        <td align="left">
-                            @item.CategoryDescription
-                        </td>
+                        }
 
                     </tr>
                 }

@@ -28,7 +28,26 @@ namespace UnamiSushi.Controllers
 
         public ActionResult SushidoPV()
         {
-            return View();
+            MenuViewModel menuVM = new MenuViewModel();
+            // query a category
+            var aCategory = (from c in db.MenuCategories
+                             where c.CategoryName == "Sushi Burrito"
+                             select c).FirstOrDefault<MenuCategory>();
+            var resultCategory = aCategory.CategoryName.ToString();
+
+            menuVM.CategoryName = resultCategory;// populating the data into burritoVM
+            foreach (var item in resultCategory)
+            {
+                var menuItems = (from m in db.MenuItems
+                                 where m.CategoryName == "Sushi Burrito"
+                                 select m.MenuItemName).ToList();
+                menuVM.MenuItemName = menuItems;
+            }
+
+            List<MenuViewModel> viewModelList = new List<MenuViewModel>();
+            viewModelList.Add(menuVM);
+
+            return View(viewModelList);
         }
 
         public ActionResult SushiRollsPV()
