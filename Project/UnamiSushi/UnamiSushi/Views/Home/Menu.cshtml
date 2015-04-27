@@ -3,6 +3,8 @@
     ViewBag.Title = "Home Page";
 }
 
+@using UnamiSushi.Models
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,13 +86,13 @@
     <section id="sushido">
         <div class="container">
             <div>
-                @Html.Partial("SushidoPV")
-
+                @*@Html.Partial("SushidoPV")*@
+                @*@Html.Partial("DetailsPartial")*@
             </div>
         </div>
     </section>
     <!-- sushirolls Grid Section -->
-    <section id="sushirolls" class="bg-light-gray">
+    <section id="sushi" class="bg-light-gray">
         <div class="container">
             <div>
                 @Html.Partial("SushiRollPV")
@@ -108,7 +110,7 @@
         </div>
     </section>
     <!-- asiangrill Section -->
-    <section id="asiangrill" class="bg-light-gray">
+    <section id="asian-grill" class="bg-light-gray">
         <div class="container">
             <div>
                 @Html.Partial("AsianGrillPV")
@@ -119,7 +121,7 @@
     <section id="contact">
         <div class="container">
             <div>
-                @Html.Partial("SushidoPV")
+                @*@Html.Partial("SushidoPV")*@
 
             </div>
         </div>

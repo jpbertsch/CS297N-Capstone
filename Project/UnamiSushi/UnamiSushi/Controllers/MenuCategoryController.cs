@@ -49,6 +49,27 @@ namespace UnamiSushi.Controllers
             return View(menuCategory);
         }
 
+        // GET: MenuCategory/Details/5
+        public ActionResult DetailsPartial(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
+
+            var itemGallery = db.MenuItems.First().MenuPictures;
+
+            MenuCategory menuCategory = (from c in menuCategories where c.CategoryID == id select c).FirstOrDefault();
+
+            if (menuCategory == null)
+            {
+                return HttpNotFound();
+            }
+            return View(menuCategory);
+        }
+
         // GET: MenuCategory/Create
         public ActionResult Create()
         {

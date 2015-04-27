@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using UnamiSushi.DAL;
@@ -62,6 +63,28 @@ namespace UnamiSushi.Controllers
         {
             return View();
         }
+
+        // GET: MenuCategory/Details/5
+        public ActionResult DetailsPartial(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
+
+            var itemGallery = db.MenuItems.First().MenuPictures;
+
+            MenuCategory menuCategory = (from c in menuCategories where c.CategoryID == id select c).FirstOrDefault();
+
+            if (menuCategory == null)
+            {
+                return HttpNotFound();
+            }
+            return View(menuCategory);
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
