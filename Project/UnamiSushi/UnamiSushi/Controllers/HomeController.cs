@@ -23,7 +23,7 @@ namespace UnamiSushi.Controllers
         //}
         public ActionResult Menu()
         {
-            return View(db.MenuCategories.ToList());
+            return View(db.MenuItems.ToList());
         }
 
         public ActionResult SushidoPV()

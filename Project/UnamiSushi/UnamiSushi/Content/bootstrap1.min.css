@@ -24,6 +24,7 @@ header{
 }
 hgroup, main, menu, nav, section, summary {
     display: block;
+    padding: 100px;
 }
 
 audio, canvas, progress, video {
@@ -1356,7 +1357,7 @@ body {
     font-size: 14px;
     line-height: 1.42857143;
     color: #333;
-    background-color:black;
+    background-color: #fff;
 }
 
 button, input, select, textarea {

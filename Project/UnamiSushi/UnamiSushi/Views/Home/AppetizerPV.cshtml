@@ -1,39 +1,58 @@
-﻿@model IEnumerable<UnamiSushi.Models.MenuCategory>
+﻿@model IEnumerable<UnamiSushi.Models.MenuItem>
 @using UnamiSushi.Models
 
 
 @if (Model != null)
 {
     <div class="grid">
-        <table cellspacing="0" width="80%">
+        <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Appetizers</h2>
+        <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
+        <br />
+        <table cellspacing="0" width="100%">
             <thead>
                 <tr>
-                    <th>
-                        CategoryID
+                    <th style="width: 250px;">
+                        Sushido
                     </th>
-                    <th>
-                        CategoryName
+                    <th style="width: 180px;">
+                        Name
                     </th>
-                    <th>
-                        CategoryDescription
+                    <th style="width: 100px;">
+                        Price
+                    </th>
+                    <th style="width: 600px;">
+                        Description
                     </th>
 
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model)
+                @foreach (var item in Model.Where(x => x.CategoryName == "Sushi Burrito"))
                 {
                     <tr>
                         <td align="left">
-                            @item.CategoryID
-                        </td>
-                        <td align="left">
-                            @item.CategoryName
-                        </td>
-                        <td align="left">
-                            @item.CategoryDescription
-                        </td>
+                            @foreach (var pic in Model.Where(x => x.MenuItemID == item.MenuItemID))
+                            {
+                                string imageString = item.MenuPictures.First().PicturePathname;
 
+                                //string imageString = "/Photos/Normal/SushiRoll1.jpg";
+                                <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
+                                    <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                                </a>
+
+                                <br />
+
+                            }
+                        </td>
+                        <td align="left">
+                            @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        </td>
+                        <td align="left">
+                            @item.MenuItemPrice
+                        </td>
+                        <td align="left">
+                            @item.MenuItemDescription
+                        </td>
                     </tr>
                 }
             </tbody>

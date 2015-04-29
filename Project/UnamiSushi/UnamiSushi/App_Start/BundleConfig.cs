@@ -30,9 +30,9 @@ namespace UnamiSushi
                       "~/Scripts/contact_me.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/agency.css",      
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/agency.css",
                       "~/Content/font-awesome.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
