@@ -178,6 +178,7 @@
     <Compile Include="Models\MenuCategory.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\MenuPicture.cs" />
+    <Compile Include="Models\MenuViewModel.cs" />
     <Compile Include="Models\Reply.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -294,6 +295,7 @@
     <Content Include="Views\Home\SushiRollPV.cshtml" />
     <Content Include="Views\Home\AppetizerPV.cshtml" />
     <Content Include="Views\Home\AsianGrillPV.cshtml" />
+    <Content Include="Views\Home\DetailsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
