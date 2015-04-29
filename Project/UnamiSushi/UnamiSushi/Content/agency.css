@@ -82,7 +82,7 @@ h6 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
     color: #fff;
-    background-color: #fed136;
+    background-color: #5292D1;
 }
 
 .btn-primary:hover,
@@ -184,10 +184,12 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-brand {
     font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fed136;
+    color: #fff;
 }
 
-.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:hover{
+    color: #5292D1;
+}
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
@@ -199,8 +201,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: #5292D1;
+    background-color: #5292D1;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -217,25 +219,25 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: white;
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #fed136;
+    color: #5292D1;
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #fed136;
+    background-color: limegreen;
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #fec503;
+    background-color: #5292D1
 }
 
 @media(min-width:768px) {
@@ -332,6 +334,7 @@ header .intro-text .intro-heading {
 
 section {
     padding-top: 100px;
+    background-color: white;
 }
 
 section h2.section-heading {

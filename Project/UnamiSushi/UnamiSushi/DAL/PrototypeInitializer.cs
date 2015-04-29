@@ -36,8 +36,8 @@ namespace UnamiSushi.DAL
 
             var menuPictures = new List<MenuPicture>
             {
-                new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/SushiRoll1.jpg", 
-                                ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
+                new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/California.jpg", 
+                                ThumbnailPathname="~/Photos/Thumbnail/californiathumb.jpg"},
                 new MenuPicture{MenuItemID=2, PicturePathname="~/Photos/Normal/SushiRoll2.jpg",
                                 ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
                 new MenuPicture{MenuItemID=3, PicturePathname="~/Photos/Normal/SushiRoll3.jpg",
