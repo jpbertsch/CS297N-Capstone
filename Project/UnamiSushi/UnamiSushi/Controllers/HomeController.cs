@@ -17,72 +17,9 @@ namespace UnamiSushi.Controllers
             return View();
         }
         
-        //Partial View Test
-        //public ActionResult Partial()
-        //{
-        //    return View();
-        //}
         public ActionResult Menu()
         {
             return View(db.MenuItems.ToList());
-        }
-
-        public ActionResult SushidoPV()
-        {
-            MenuViewModel menuVM = new MenuViewModel();
-            // query a category
-            var aCategory = (from c in db.MenuCategories
-                             where c.CategoryName == "Sushi Burrito"
-                             select c).FirstOrDefault<MenuCategory>();
-            var resultCategory = aCategory.CategoryName.ToString();
-
-            menuVM.CategoryName = resultCategory;// populating the data into burritoVM
-            foreach (var item in resultCategory)
-            {
-                var menuItems = (from m in db.MenuItems
-                                 where m.CategoryName == "Sushi Burrito"
-                                 select m.MenuItemName).ToList();
-                menuVM.MenuItemName = menuItems;
-            }
-
-            List<MenuViewModel> viewModelList = new List<MenuViewModel>();
-            viewModelList.Add(menuVM);
-
-            return View(viewModelList);
-        }
-
-        public ActionResult SushiRollsPV()
-        {
-            return View();
-        }
-        public ActionResult AppetizersPV()
-        {
-            return View();
-        }
-        public ActionResult AsianGrillPV()
-        {
-            return View();
-        }
-
-        // GET: MenuCategory/Details/5
-        public ActionResult DetailsPartial(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
-
-            var itemGallery = db.MenuItems.First().MenuPictures;
-
-            MenuCategory menuCategory = (from c in menuCategories where c.CategoryID == id select c).FirstOrDefault();
-
-            if (menuCategory == null)
-            {
-                return HttpNotFound();
-            }
-            return View(menuCategory);
         }
 
         public ActionResult About()
