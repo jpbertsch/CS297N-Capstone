@@ -65,6 +65,21 @@ namespace UnamiSushi.Controllers
         }
 
         // GET: MenuCategory/Details/5
+
+        public ActionResult Details(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            MenuItem menuItem = db.MenuItems.Find(id);
+            if (menuItem == null)
+            {
+                return HttpNotFound();
+            }
+            return View(menuItem);
+        }
+        
         public ActionResult DetailsPartial(int? id)
         {
             if (id == null)
