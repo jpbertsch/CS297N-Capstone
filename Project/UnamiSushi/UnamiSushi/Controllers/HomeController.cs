@@ -17,15 +17,11 @@ namespace UnamiSushi.Controllers
             return View();
         }
         
-        //Partial View Test
-        //public ActionResult Partial()
-        //{
-        //    return View();
-        //}
         public ActionResult Menu()
         {
             return View(db.MenuItems.ToList());
         }
+
 
         public ActionResult SushidoPV()
         {
@@ -80,26 +76,7 @@ namespace UnamiSushi.Controllers
             return View(menuItem);
         }
         
-        public ActionResult DetailsPartial(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
-
-            var itemGallery = db.MenuItems.First().MenuPictures;
-
-            MenuCategory menuCategory = (from c in menuCategories where c.CategoryID == id select c).FirstOrDefault();
-
-            if (menuCategory == null)
-            {
-                return HttpNotFound();
-            }
-            return View(menuCategory);
-        }
-
+     
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
