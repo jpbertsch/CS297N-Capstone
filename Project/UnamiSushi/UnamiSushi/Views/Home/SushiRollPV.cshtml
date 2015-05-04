@@ -12,7 +12,7 @@
             <thead>
                 <tr>
                     <th style="width: 250px;">
-                        Sushido
+                        Original Sushi Rolls
                     </th>
                     <th style="width: 180px;">
                         Name
@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Where(x => x.SubcategoryID == 4))
+                @foreach (var item in Model.Where(x => x.SubcategoryID == 1))
                 {
                     <tr>
                         <td align="left">
@@ -60,4 +60,111 @@
 
     </div>
 
+    <div class="grid">
+        <br />
+        <table cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th style="width: 250px;">
+                        Special Sushi Rolls
+                    </th>
+                    <th style="width: 180px;">
+                        Name
+                    </th>
+                    <th style="width: 100px;">
+                        Price
+                    </th>
+                    <th style="width: 600px;">
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Where(x => x.SubcategoryID == 2))
+                {
+                    <tr>
+                        <td align="left">
+                            @foreach (var pic in Model.Where(x => x.MenuItemID == item.MenuItemID))
+                            {
+                                //string imageString = item.MenuPictures.First().PicturePathname;
+
+                                string imageString = "/Photos/Normal/SushiRoll1.jpg";
+                                <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
+                                    <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                                </a>
+
+                                <br />
+
+                            }
+                        </td>
+                        <td align="left">
+                            @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        </td>
+                        <td align="left">
+                            @item.MenuItemPrice
+                        </td>
+                        <td align="left">
+                            @item.MenuItemDescription
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="grid">
+        <br />
+        <table cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th style="width: 250px;">
+                        Tempura Sushi Rolls
+                    </th>
+                    <th style="width: 180px;">
+                        Name
+                    </th>
+                    <th style="width: 100px;">
+                        Price
+                    </th>
+                    <th style="width: 600px;">
+                        Description
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Where(x => x.SubcategoryID == 3))
+                {
+                    <tr>
+                        <td align="left">
+                            @foreach (var pic in Model.Where(x => x.MenuItemID == item.MenuItemID))
+                            {
+                                //string imageString = item.MenuPictures.First().PicturePathname;
+
+                                string imageString = "/Photos/Normal/SushiRoll1.jpg";
+                                <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
+                                    <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                                </a>
+
+                                <br />
+
+                            }
+                        </td>
+                        <td align="left">
+                            @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        </td>
+                        <td align="left">
+                            @item.MenuItemPrice
+                        </td>
+                        <td align="left">
+                            @item.MenuItemDescription
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
 }
