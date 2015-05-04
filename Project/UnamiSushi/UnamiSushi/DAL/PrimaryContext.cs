@@ -15,6 +15,7 @@ namespace UnamiSushi.DAL
         { }
 
         public DbSet<MenuCategory> MenuCategories { get; set;}
+        public DbSet<Subcategory> Subcategories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
         public DbSet<MenuPicture> MenuPictures { get; set; }
         public DbSet<Comment> Comments { get; set; }

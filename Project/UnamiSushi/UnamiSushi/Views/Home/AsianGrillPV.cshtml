@@ -27,15 +27,15 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in Model.Where(x => x.CategoryName == "Sushi Burrito"))
+                @foreach (var item in Model.Where(x => x.SubcategoryID == 7))
                 {
                     <tr>
                         <td align="left">
                             @foreach (var pic in Model.Where(x => x.MenuItemID == item.MenuItemID))
                             {
-                                string imageString = item.MenuPictures.First().PicturePathname;
+                                //string imageString = item.MenuPictures.First().PicturePathname;
 
-                                //string imageString = "/Photos/Normal/SushiRoll1.jpg";
+                                string imageString = "/Photos/Normal/SushiRoll1.jpg";
                                 <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
                                     <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
                                 </a>

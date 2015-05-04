@@ -14,6 +14,6 @@ namespace UnamiSushi.Models
         public string CategoryDescription { get; set; } //Description of dishes in a menu category
 
 
-        public virtual ICollection<MenuItem> MenuItems { get; set; }
+        public virtual ICollection<Subcategory> Subcategories { get; set; }
     }
 }
