@@ -46,6 +46,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
@@ -100,6 +103,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
@@ -154,6 +160,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
@@ -208,6 +217,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
@@ -262,6 +274,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
@@ -316,6 +331,9 @@
                         </td>
                         <td align="left">
                             @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
+                        
+                            @ if (item.Vegetarian)
+                            {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
                         </td>
                         <td align="left">
                             @item.MenuItemPrice
