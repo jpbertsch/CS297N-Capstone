@@ -6,26 +6,31 @@
 {
     <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Sushi Burritos</h2>
     <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
-    <br />
     
-    @ for(int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
+    <br />
+
+    for (int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
     {
         <div class="grid">
-            
             <table cellspacing="0" width="100%">
+                <br />
                 <thead>
                     <tr>
                         <th style="width: 250px;">
-                            @Switch (i)
-                                Case 1:
-                                    Classic Sushidos
-                                    Break;
-                                Case 2:
-                                    Premium Sushidos
-                                    Break;
-                                Case 3:
-                                    Vegetarian Sushidos
-                                    Break;
+                                @{ 
+                                    switch (i)
+                                        {
+                                            case 1:
+                                                <p> Classic Sushido </p>
+                                                break;
+                                            case 2:
+                                                <p> Premium Sushidos </p>
+                                                break;
+                                            case 3:
+                                                <p> Vegetarian Sushidos </p>
+                                                break;
+                                        }
+                                }
                                     
                         </th>
                         <th style="width: 180px;">
@@ -40,16 +45,18 @@
     
                     </tr>
                 </thead>
+                <br />
                 <tbody>
-                    @foreach (var item in Model.Where(x => x.SubcategoryID == i))
-                    {
+                    @{  foreach (var item in Model.Where(x => x.SubcategoryID == i))
+                        {
                         
                         <tr>
                         
                             <td align="left">
-                                //string imageString = item.MenuPictures.First().PicturePathname;
+                                @*string imageString = item.MenuPictures.First().PicturePathname;*@
                                 
-                                string imageString = "/Photos/Normal/SushiRoll1.jpg";
+                                @{ string imageString = "/Photos/Normal/SushiRoll1.jpg"; }
+
                                 <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
                                     <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
                                 </a>
@@ -57,10 +64,14 @@
                             </td>
                             
                             <td align="left">
+
                                 @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
-                            
-                                @ if (item.Vegetarian)
-                                {<img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">}
+
+                                @if( item.Vegetarian == true ) 
+                                    { 
+                                        <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian"> 
+                                    }
+
                             </td>
                             
                             <td align="left">
@@ -72,6 +83,7 @@
                             </td>
                             
                         </tr>
+                        }
                     }
                 </tbody>
             </table>
