@@ -18,10 +18,10 @@
         @Html.HiddenFor(model => model.MenuItemID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.MenuItemCategory, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SubcategoryID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.MenuItemCategory, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MenuItemCategory, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.SubcategoryID, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SubcategoryID, "", new { @class = "text-danger" })
             </div>
         </div>
 

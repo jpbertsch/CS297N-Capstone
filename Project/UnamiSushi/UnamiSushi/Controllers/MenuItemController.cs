@@ -47,16 +47,18 @@ namespace UnamiSushi.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MenuItemID,MenuItemCategory,MenuItemName,MenuItemDescription,MenuItemPrice")] MenuItem menuItem)
+        public ActionResult Create([Bind(Include = "MenuItemID,SubcategoryID,MenuItemName,Piece,Cooked,Vegetarian,MenuItemDescription,MenuItemPrice")] MenuItem newMenuItem)
         {
             if (ModelState.IsValid)
             {
-                db.MenuItems.Add(menuItem);
+                db.MenuItems.Add(newMenuItem);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(menuItem);
+            ViewBag.SubcategoryID = new SelectList(db.Subcategories, "SubcategoryID", "SubcategoryName");
+
+            return View(newMenuItem);
         }
 
         // GET: MenuItem/Edit/5
