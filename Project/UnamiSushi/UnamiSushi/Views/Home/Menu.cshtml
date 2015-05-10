@@ -1,4 +1,6 @@
-﻿@model IEnumerable<UnamiSushi.Models.MenuItem>
+﻿@*@model IEnumerable<UnamiSushi.Models.MenuCategory>*@
+@Model UnamiSushi.Models.MenuCategory
+
 @{
     ViewBag.Title = "Home Page";
 }
@@ -83,7 +85,9 @@
     <section id="sushido">
         <div class="container">
             <div>
-                @Html.Partial("SushidoPV")
+                @*@Html.Partial("SushidoPV")*@
+                @*@Html.Partial("PartialViewBase")*@
+                @{ Html.RenderAction("CategoryPartialDetail"); }
             </div>
         </div>
     </section>
@@ -91,8 +95,8 @@
     <section id="sushi-rolls" class="bg-light-gray">
         <div class="container">
             <div>
-                @Html.Partial("SushiRollPV")
-
+                @*@Html.Partial("SushiRollPV")*@
+                @*@Html.Partial("PartialViewBase")*@
             </div>
         </div>
     </section>
@@ -100,8 +104,8 @@
     <section id="appetizers">
         <div class="container">
             <div>
-                @Html.Partial("AppetizerPV")
-
+                @*@Html.Partial("AppetizerPV")*@
+                @*@Html.Partial("PartialViewBase")*@
             </div>
         </div>
     </section>
@@ -109,8 +113,8 @@
     <section id="asian-grill" class="bg-light-gray">
         <div class="container">
             <div>
-                @Html.Partial("AsianGrillPV")
-
+                @*@Html.Partial("AsianGrillPV")*@
+                @*@Html.Partial("PartialViewBase")*@
             </div>
         </div>
     </section>

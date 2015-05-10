@@ -19,7 +19,7 @@ namespace UnamiSushi.Controllers
         
         public ActionResult Menu()
         {
-            return View(db.MenuItems.ToList());
+            return View(db.MenuCategories.FirstOrDefault());
         }
 
 
@@ -68,12 +68,12 @@ namespace UnamiSushi.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MenuItem menuItem = db.MenuItems.Find(id);
-            if (menuItem == null)
+            MenuCategory menuCategory = db.MenuCategories.Find(id);
+            if (menuCategory == null)
             {
                 return HttpNotFound();
             }
-            return View(menuItem);
+            return View(menuCategory);
         }
         
      
@@ -89,6 +89,14 @@ namespace UnamiSushi.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        [ChildActionOnly]
+        public ActionResult CategoryPartialDetail()
+        {
+            //var model = db.MenuCategories.Find(id);
+
+            return PartialView("PartialViewBase");
         }
     }
 }

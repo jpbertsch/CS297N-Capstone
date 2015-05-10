@@ -1,93 +1,112 @@
-@model IEnumerable<UnamiSushi.Models.MenuItem>
-@using UnamiSushi.Models
-
-
-@if (Model != null)
+@*@model IEnumerable<UnamiSushi.Models.MenuCategory>*@
+@Model UnamiSushi.Models.MenuCategory
+@if (Model.First() != null)
 {
-    <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Sushi Burritos</h2>
-    <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
-    
-    <br />
+    var menuCategory = Model.First();
 
-    for (int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
+    if (Model != null)
     {
-        <div class="grid">
-            <table cellspacing="0" width="100%">
+        foreach (var subCat in menuCategory.Subcategories)
+        {
+            <div class="grid">
+                <table cellspacing="0" width="100%">
                 <br />
-                <thead>
-                    <tr>
-                        <th style="width: 250px;">
-                                @{ 
-                                    switch (i)
-                                        {
-                                            case 1:
-                                                <p> Classic Sushido </p>
-                                                break;
-                                            case 2:
-                                                <p> Premium Sushidos </p>
-                                                break;
-                                            case 3:
-                                                <p> Vegetarian Sushidos </p>
-                                                break;
-                                        }
-                                }
-                                    
-                        </th>
-                        <th style="width: 180px;">
-                            Name
-                        </th>
-                        <th style="width: 100px;">
-                            Price
-                        </th>
-                        <th style="width: 600px;">
-                            Description
-                        </th>
-    
-                    </tr>
-                </thead>
-                <br />
-                <tbody>
-                    @{  foreach (var item in Model.Where(x => x.SubcategoryID == i))
-                        {
-                        
+                    <thead>
                         <tr>
-                        
+                            <th style="width: 250px;">
+                                @subCat.SubcategoryName
+                            </th>
+
+                            <th style="width: 180px;">
+                                Name
+                            </th>
+
+                            <th style="width: 100px;">
+                                Price
+                            </th>
+
+                            <th style="width: 600px;">
+                                Description
+                            </th>
+
+                        </tr>
+                    </thead>
+
+                    <br />
+
+                    <tbody>
+                        @foreach (var menuItem in subCat.MenuItems)
+                        {
+                        <tr>
+
                             <td align="left">
                                 @*string imageString = item.MenuPictures.First().PicturePathname;*@
-                                
+
                                 @{ string imageString = "/Photos/Normal/SushiRoll1.jpg"; }
 
-                                <a href="@Url.Action("Details", "MenuItem", new { id = item.MenuItemID })">
+                                <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
                                     <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
                                 </a>
+
                                 <br />
-                            </td>
-                            
-                            <td align="left">
-
-                                @Html.ActionLink(item.MenuItemName, "Details", "MenuItem", new { id = item.MenuItemID }, null)
-
-                                @if( item.Vegetarian == true ) 
-                                    { 
-                                        <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian"> 
-                                    }
 
                             </td>
-                            
+
                             <td align="left">
-                                @item.MenuItemPrice
+
+                                @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
+
+                                menuItem.MenuItemName
+
+                                @if (menuItem.Vegetarian == true)
+                                {
+                                    <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">
+                                }
+
                             </td>
-                            
+
                             <td align="left">
-                                @item.MenuItemDescription
+                                @menuItem.MenuItemPrice
                             </td>
-                            
+
+                            <td align="left">
+                                @menuItem.MenuItemDescription
+                            </td>
+
                         </tr>
                         }
-                    }
-                </tbody>
-            </table>
-    
-        </div>
+                    </tbody>
+                </table>
+            </div>
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @*<h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Sushi Burritos</h2>
+            <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
+
+            <br />
+
+            for (int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
+            {
+
+                            @{  foreach (var item in Model.Where(x => x.SubcategoryID == i))
+                                {
+                                }
+                            }
+
+            }*@
     }
 }
