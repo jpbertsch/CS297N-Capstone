@@ -126,10 +126,5 @@ namespace UnamiSushi.Controllers
             }
             base.Dispose(disposing);
         }
-
-        public ActionResult Test()
-        {
-            return View();
-        }
     }
 }
