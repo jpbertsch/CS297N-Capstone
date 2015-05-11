@@ -6,15 +6,15 @@ using UnamiSushi.Models;
 
 namespace UnamiSushi.DAL
 {
-    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<PrimaryContext>
+    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseAlways<PrimaryContext>
     {
         protected override void Seed(PrimaryContext context)
         {
              var menuCategories = new List<MenuCategory>
             {
-                new MenuCategory{CategoryName="Sushidos", CategoryDescription="Sushi combined into a burrito rice wrap"},
-                new MenuCategory{CategoryName="Grills", CategoryDescription="Asian Grills are your traditional cooked japansese foods like teryaki, stir-fry, and curries"},
-                new MenuCategory{CategoryName="Sushi Rolls", CategoryDescription="Contains your classic california roll to special rolls"},
+                new MenuCategory{CategoryName="Sushi-Burritos", CategoryDescription="Sushi combined into a burrito rice wrap"},
+                new MenuCategory{CategoryName="Asian-Grill", CategoryDescription="Asian Grills are your traditional cooked japansese foods like teryaki, stir-fry, and curries"},
+                new MenuCategory{CategoryName="Sushi-Rolls", CategoryDescription="Contains your classic california roll to special rolls"},
             };
             menuCategories.ForEach(s => context.MenuCategories.Add(s));
             context.SaveChanges();

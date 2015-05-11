@@ -1,10 +1,17 @@
-﻿@*@model IEnumerable<UnamiSushi.Models.MenuCategory>*@
+﻿@Model UnamiSushi.Models.MenuCategory
 
-@Model UnamiSushi.Models.MenuCategory
+
+
 
 @if (Model != null)
 {
-    //var menuCat = Model.Where(x => x.CategoryID = 1);
+    <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+    <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
+
+    <br />
+    <br />
+    <br />
+    <br />
 
     foreach (var subCat in Model.Subcategories)
     {
@@ -37,23 +44,32 @@
                         <tr>
 
                             <td align="left">
-                                @*string imageString = item.MenuPictures.First().PicturePathname;*@
 
-                                @{ string imageString = "/Photos/Normal/SushiRoll1.jpg"; }
+                                @{
+                                    string imageString;
+                                    
+                                    if (false)
+                                    {
+                                        imageString = menuItem.MenuPictures.First().PicturePathname;
+                                    }
+                                    else
+                                    {
+                                        imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
+                                    }
 
-                                <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                    <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
-                                </a>
+                                    <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                        <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                                    </a>
 
-                                <br />
-
+                                    <br />
+                                }
                             </td>
 
                             <td align="left">
 
                                 @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
 
-                                menuItem.MenuItemName
+                                @menuItem.MenuItemName
 
                                 @if (menuItem.Vegetarian == true)
                                 {

@@ -1,5 +1,5 @@
-﻿@*@model IEnumerable<UnamiSushi.Models.MenuCategory>*@
-@Model UnamiSushi.Models.MenuCategory
+﻿@model IEnumerable<UnamiSushi.Models.MenuCategory>
+@*@Model UnamiSushi.Models.MenuCategory*@
 
 @{
     ViewBag.Title = "Home Page";
@@ -53,18 +53,14 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#sushido">Sushido</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#sushi-rolls">Sushi Rolls</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#appetizers">Appetizers</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#asian-grill">Asian Grill</a>
-                    </li>
+
+                    @foreach (var item in Model)
+                    {
+                        <li>
+                            <a class="page-scroll" href="#@item.CategoryName">@item.CategoryName</a>
+                        </li>
+                    }
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -81,43 +77,17 @@
             </div>
         </div>
     </header>
-    <!-- sushido Section -->
-    <section id="sushido">
-        <div class="container">
-            <div>
-                @*@Html.Partial("SushidoPV")*@
-                @*@Html.Partial("PartialViewBase")*@
-                @{ Html.RenderAction("CategoryPartialDetail"); }
+
+    @foreach (var item in Model)
+    {
+        <section id="@item.CategoryName">
+            <div class="container">
+                <div>
+                    @{ Html.RenderAction("CategoryPartialDetails", new { id = item.CategoryID }); }
+                </div>
             </div>
-        </div>
-    </section>
-    <!-- sushirolls Grid Section -->
-    <section id="sushi-rolls" class="bg-light-gray">
-        <div class="container">
-            <div>
-                @*@Html.Partial("SushiRollPV")*@
-                @*@Html.Partial("PartialViewBase")*@
-            </div>
-        </div>
-    </section>
-    <!-- appetizers Section -->
-    <section id="appetizers">
-        <div class="container">
-            <div>
-                @*@Html.Partial("AppetizerPV")*@
-                @*@Html.Partial("PartialViewBase")*@
-            </div>
-        </div>
-    </section>
-    <!-- asiangrill Section -->
-    <section id="asian-grill" class="bg-light-gray">
-        <div class="container">
-            <div>
-                @*@Html.Partial("AsianGrillPV")*@
-                @*@Html.Partial("PartialViewBase")*@
-            </div>
-        </div>
-    </section>
+        </section>
+    }
     <footer>
         <div class="container">
             <div class="row">

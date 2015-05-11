@@ -297,6 +297,7 @@
     <Content Include="Views\Home\AppetizerPV.cshtml" />
     <Content Include="Views\Home\AsianGrillPV.cshtml" />
     <Content Include="Views\Home\PartialViewBase.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

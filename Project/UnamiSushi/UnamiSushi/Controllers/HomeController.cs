@@ -19,7 +19,7 @@ namespace UnamiSushi.Controllers
         
         public ActionResult Menu()
         {
-            return View(db.MenuCategories.FirstOrDefault());
+            return View(db.MenuCategories);
         }
 
 
@@ -92,11 +92,11 @@ namespace UnamiSushi.Controllers
         }
 
         [ChildActionOnly]
-        public ActionResult CategoryPartialDetail()
+        public ActionResult CategoryPartialDetails(int? id)
         {
-            //var model = db.MenuCategories.Find(id);
+            var model = db.MenuCategories.Find(id);
 
-            return PartialView("PartialViewBase");
+            return PartialView("Details", model);
         }
     }
 }
