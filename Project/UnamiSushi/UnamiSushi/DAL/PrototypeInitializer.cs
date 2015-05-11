@@ -6,7 +6,7 @@ using UnamiSushi.Models;
 
 namespace UnamiSushi.DAL
 {
-    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseAlways<PrimaryContext>
+    public class PrototypeInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<PrimaryContext>
     {
         protected override void Seed(PrimaryContext context)
         {

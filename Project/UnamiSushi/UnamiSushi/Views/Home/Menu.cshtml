@@ -82,8 +82,8 @@
     {
         <section id="@item.CategoryName">
             <div class="container">
-                <div>
-                    @{ Html.RenderAction("CategoryPartialDetails", new { id = item.CategoryID }); }
+                <div style="visibility: hidden;">
+                    @{Html.RenderAction("CategoryPartialDetails", new { id = item.CategoryID });}
                 </div>
             </div>
         </section>

@@ -64,10 +64,10 @@ namespace UnamiSushi.Controllers
 
         public ActionResult Details(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
+            //if (id == null)
+            //{
+            //    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            //}
             MenuCategory menuCategory = db.MenuCategories.Find(id);
             if (menuCategory == null)
             {

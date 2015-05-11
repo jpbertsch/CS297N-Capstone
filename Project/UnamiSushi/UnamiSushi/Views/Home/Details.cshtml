@@ -2,21 +2,21 @@
 
 
 
-
-@if (Model != null)
-{
-    <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
-    <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
-
-    <br />
-    <br />
-    <br />
-    <br />
-
-    foreach (var subCat in Model.Subcategories)
+<div style="visibility: visible;">
+    @if (Model != null)
     {
-        <div class="grid">
-            <table cellspacing="0" width="100%">
+        <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;">C= Cooked   R= Raw   <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Vegetarian</h4>
+
+        <br />
+        <br />
+        <br />
+        <br />
+
+        foreach (var subCat in Model.Subcategories)
+        {
+            <div class="grid" style="padding-top: 30px;">
+                <table cellspacing=" 0" width="100%">
                 <thead>
                     <tr>
                         <th style="width: 250px;">
@@ -46,20 +46,20 @@
                             <td align="left">
 
                                 @{
-                                    string imageString;
-                                    
-                                    if (false)
-                                    {
-                                        imageString = menuItem.MenuPictures.First().PicturePathname;
-                                    }
-                                    else
-                                    {
-                                        imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
-                                    }
+                        string imageString;
 
-                                    <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                        <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
-                                    </a>
+                        if (false)
+                        {
+                            imageString = menuItem.MenuPictures.First().PicturePathname;
+                        }
+                        else
+                        {
+                            imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
+                        }
+
+                        <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                            <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                        </a>
 
                                     <br />
                                 }
@@ -68,8 +68,10 @@
                             <td align="left">
 
                                 @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
+                                <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                    @menuItem.MenuItemName
+                                </a>
 
-                                @menuItem.MenuItemName
 
                                 @if (menuItem.Vegetarian == true)
                                 {
@@ -89,12 +91,10 @@
                         </tr>
                     }
                 </tbody>
-            </table>
-        </div>
+                </table>
+            </div>
 
-    }
-
-
+        }
 
 
 
@@ -107,18 +107,21 @@
 
 
 
-    @*<h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Sushi Burritos</h2>
-        <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
 
-        <br />
 
-        for (int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
-        {
+        @*<h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">Sushi Burritos</h2>
+            <h4 class="section-heading" style="float:right; color:limegreen;">C= Cooked   R= Raw   V= Vegetarian</h4>
 
-                        @{  foreach (var item in Model.Where(x => x.SubcategoryID == i))
-                            {
+            <br />
+
+            for (int i = 1; i < 4; i++) //Sushido subcategories go from 1 to 3
+            {
+
+                            @{  foreach (var item in Model.Where(x => x.SubcategoryID == i))
+                                {
+                                }
                             }
-                        }
 
-        }*@
-}
+            }*@
+    }
+</div>
