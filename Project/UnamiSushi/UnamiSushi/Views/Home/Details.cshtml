@@ -5,8 +5,10 @@
 <div style="visibility: visible;">
     @if (Model != null)
     {
-        <h2 class="section-heading" style="float:left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
-        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;">C= Cooked   R= Raw   <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Vegetarian</h4>
+        <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Cooked</h4>   
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Raw</h4>
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Vegetarian</h4>
 
         <br />
         <br />
@@ -15,84 +17,96 @@
 
         foreach (var subCat in Model.Subcategories)
         {
-            <div class="grid" style="padding-top: 30px;">
+            <div class="grid" style="padding-top: 5px;">
+
                 <table cellspacing=" 0" width="100%">
-                <thead>
-                    <tr>
-                        <th style="width: 250px;">
-                            @subCat.SubcategoryName
-                        </th>
 
-                        <th style="width: 180px;">
-                            Name
-                        </th>
+                    <thead>
 
-                        <th style="width: 100px;">
-                            Price
-                        </th>
-
-                        <th style="width: 600px;">
-                            Description
-                        </th>
-
-                    </tr>
-                </thead>
-
-                <tbody>
-                    @foreach (var menuItem in subCat.MenuItems)
-                    {
                         <tr>
 
-                            <td align="left">
+                            <th style="width: 250px;">
+                                @subCat.SubcategoryName
 
-                                @{
-                        string imageString;
-
-                        if (false)
-                        {
-                            imageString = menuItem.MenuPictures.First().PicturePathname;
-                        }
-                        else
-                        {
-                            imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
-                        }
-
-                        <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                            <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
-                        </a>
-
-                                    <br />
-                                }
-                            </td>
-
-                            <td align="left">
-
-                                @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
-                                <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                    @menuItem.MenuItemName
-                                </a>
+                            </th>
 
 
-                                @if (menuItem.Vegetarian == true)
-                                {
-                                    <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">
-                                }
+                            <th style="width: 180px;">
+                                Name
+                            </th>
 
-                            </td>
+                            <th style="width: 100px;">
+                                Price
+                            </th>
 
-                            <td align="left">
-                                @menuItem.MenuItemPrice
-                            </td>
-
-                            <td align="left">
-                                @menuItem.MenuItemDescription
-                            </td>
+                            <th style="width: 600px;">
+                                Description
+                            </th>
 
                         </tr>
-                    }
-                </tbody>
+
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var menuItem in subCat.MenuItems)
+                        {
+                            <tr>
+
+                                <td align="left">
+
+                                    @{
+                            string imageString;
+
+                            if (false)
+                            {
+                                imageString = menuItem.MenuPictures.First().PicturePathname;
+                            }
+                            else
+                            {
+                                imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
+                            }
+
+                            <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                            </a>
+
+
+                                    }
+                                </td>
+
+                                <td data-title="Name" align="left">
+
+                                    @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
+
+                                    <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                        @menuItem.MenuItemName
+                                    </a>
+
+
+                                    @if (menuItem.Vegetarian == true)
+                                    {
+                                        <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">
+                                    }
+
+                                </td>
+
+                                <td data-title="Price" align="left">
+
+                                    @menuItem.MenuItemPrice
+
+                                </td>
+
+                                <td title="Description" align="left">
+                                    @menuItem.MenuItemDescription
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
                 </table>
             </div>
+
 
         }
 
