@@ -166,6 +166,7 @@
     <Compile Include="Controllers\MenuItemController.cs" />
     <Compile Include="Controllers\MenuPictureController.cs" />
     <Compile Include="Controllers\ReplyController.cs" />
+    <Compile Include="Controllers\SubcategoryController.cs" />
     <Compile Include="DAL\PrimaryContext.cs" />
     <Compile Include="DAL\PrototypeInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -265,7 +266,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\MenuCategory\Create.cshtml" />
     <Content Include="Views\MenuCategory\Delete.cshtml" />
     <Content Include="Views\MenuCategory\Details.cshtml" />
     <Content Include="Views\MenuCategory\Edit.cshtml" />
@@ -298,6 +298,12 @@
     <Content Include="Views\Home\AsianGrillPV.cshtml" />
     <Content Include="Views\Home\PartialViewBase.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\MenuCategory\Create.cshtml" />
+    <Content Include="Views\Subcategory\Create.cshtml" />
+    <Content Include="Views\Subcategory\Delete.cshtml" />
+    <Content Include="Views\Subcategory\Details.cshtml" />
+    <Content Include="Views\Subcategory\Edit.cshtml" />
+    <Content Include="Views\Subcategory\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
