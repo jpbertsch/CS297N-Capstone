@@ -73,6 +73,8 @@ namespace UnamiSushi.Controllers
         // GET: MenuCategory/Create
         public ActionResult Create()
         {
+            
+
             return View();
         }
 

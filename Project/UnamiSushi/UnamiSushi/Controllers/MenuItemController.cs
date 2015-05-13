@@ -39,6 +39,8 @@ namespace UnamiSushi.Controllers
         // GET: MenuItem/Create
         public ActionResult Create()
         {
+            ViewBag.SubcategoryID = new SelectList(db.Subcategories, "SubcategoryID", "SubcategoryName");
+
             return View();
         }
 
@@ -55,8 +57,6 @@ namespace UnamiSushi.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            ViewBag.SubcategoryID = new SelectList(db.Subcategories, "SubcategoryID", "SubcategoryName");
 
             return View(newMenuItem);
         }
