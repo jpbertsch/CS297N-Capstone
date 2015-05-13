@@ -42,7 +42,7 @@ namespace UnamiSushi.DAL
             var menuItems = new List<MenuItem>
             {
                 // Classic Sushidos
-                new MenuItem{SubcategoryID=1, MenuItemName="Califronia", Piece=0, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=1, MenuPictureID=1, MenuItemName="Califronia", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Surimi crab, avocado, cream cheese, cucumber, tempura flakes, carrot, seaweed salad, sweet soy reduction",
                 MenuItemPrice= 8.95},
                 new MenuItem{SubcategoryID=1, MenuItemName="Neptune", Piece=0, Cooked=true, Vegetarian=false, 
@@ -62,7 +62,7 @@ namespace UnamiSushi.DAL
                 new MenuItem{SubcategoryID=2, MenuItemName="Big Foot", Piece=0, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Spicy cream cheese, spicy tuna, grilled gulf shrimp, surimi crab, tempura flakes, avocado, cucumber, seaweed salad, sweet garlic sauce, spicy sauce, sweet soy reduction",
                 MenuItemPrice= 14.95},
-                new MenuItem{SubcategoryID=2, MenuItemName="#Bacon", Piece=0, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=2, MenuPictureID=2, MenuItemName="#Bacon", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Cream cheese, Roasted jalapeno, spicy tuna, fresh salmon, tempura Applewood smoked bacon, avocado, cucumber,  sriracha maple sauce",
                 MenuItemPrice= 15.49},
                 new MenuItem{SubcategoryID=2, MenuItemName="Mt. Hood", Piece=0, Cooked=true, Vegetarian=false, 
@@ -105,13 +105,13 @@ namespace UnamiSushi.DAL
                 MenuItemPrice = 8.49},
 
                 // Sushi Rolls
-                new MenuItem{SubcategoryID=4, MenuItemName="California", Piece=8, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=4, MenuPictureID=3, MenuItemName="California", Piece=8, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Avocado, cucumber, crab cake",
                 MenuItemPrice = 4.25},
-                new MenuItem{SubcategoryID=4, MenuItemName="Philly", Piece=8, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=4, MenuPictureID=4, MenuItemName="Philly", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Fresh salmon, cream cheese, scallions, and cucumbers",
                 MenuItemPrice = 4.25},
-                new MenuItem{SubcategoryID=4, MenuItemName="Spicy Roll", Piece=8, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=4, MenuPictureID=5, MenuItemName="Spicy Roll", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Choice of tuna, salmon,or scallop, and avocado",
                 MenuItemPrice = 5.25},
                 new MenuItem{SubcategoryID=4, MenuItemName="Ducks Roll", Piece=5, Cooked=true, Vegetarian=false,
@@ -126,28 +126,28 @@ namespace UnamiSushi.DAL
                 new MenuItem{SubcategoryID=4, MenuItemName="Garden", Piece=8, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Cream cheese, asparagus, pickled burdock root, cucumber, pickled daikon radish, scallions, red bell pepper, avocado, garlic sauce",
                 MenuItemPrice = 6.95},
-                new MenuItem{SubcategoryID=4, MenuItemName="Squidward", Piece=8, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=4, MenuPictureID=6, MenuItemName="Squidward", Piece=8, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Spicy tempura fried calamari, scallions, masago, avocado",
                 MenuItemPrice = 6.49},
-                new MenuItem{SubcategoryID=5, MenuItemName="Trident", Piece=6, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=5, MenuPictureID=7, MenuItemName="Trident", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Tempura calamari, snow crab, spicy cream cheese, avocado, cucumber, scallions, spicy sauce",
                 MenuItemPrice = 7.95},
-                new MenuItem{SubcategoryID=5, MenuItemName="Florida", Piece=8, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=5, MenuPictureID=8, MenuItemName="Florida", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Creamy scallop and avocado topped with fresh salmon, masago, and lemon zest",
                 MenuItemPrice = 10.95},
-                new MenuItem{SubcategoryID=5, MenuItemName="Super Panda", Piece=6, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=5, MenuPictureID=9, MenuItemName="Super Panda", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Tempura shrimp, avocado, cucumber, snow crab, topped with sweet roasted garlic sauce",
                 MenuItemPrice = 8.49},
                 new MenuItem{SubcategoryID=5, MenuItemName="Spider", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Tempura soft shell crab, avocado, cucumber, tare,",
                 MenuItemPrice = 8.95},
-                new MenuItem{SubcategoryID=5, MenuItemName="Tiger", Piece=6, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=5, MenuPictureID=10, MenuItemName="Tiger", Piece=6, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Spicy tuna, cucumber, topped with avocado, shrimp, tempura flakes, chili sauce, chili spices",
                 MenuItemPrice = 10.95},
                 new MenuItem{SubcategoryID=5, MenuItemName="Rainbow", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Snow crab, avocado, cucumber, top with 5 fish and mango sauce",
                 MenuItemPrice = 13.49},
-                new MenuItem{SubcategoryID=5, MenuItemName="Alaskan", Piece=8, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=5, MenuPictureID=11, MenuItemName="Alaskan", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Hard Smoked salmon, cream cheese, cucumber, top w/avocado, salmon and sweet wasabi sauce",
                 MenuItemPrice = 12.49},
                 new MenuItem{SubcategoryID=5, MenuItemName="Dynamite", Piece=8, Cooked=false, Vegetarian=false,
@@ -161,23 +161,25 @@ namespace UnamiSushi.DAL
                 MenuItemPrice = 15.95},
 
                 //Tempura Rolls
-                new MenuItem{SubcategoryID=6, MenuItemName="Wonton", Piece=6, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=6, MenuPictureID=12, MenuItemName="Wonton", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Cream cheese, avocado, scallions, choice of shrimp or surimi crab",
                 MenuItemPrice = 7.49},
-                new MenuItem{SubcategoryID=6, MenuItemName="Wolverine", Piece=6, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=6, MenuPictureID=13, MenuItemName="Wolverine", Piece=6, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Spicy tuna, snow crab, spicy cream cheese, avocado, cucumber, top with sweet garlic and spicy sauces",
                 MenuItemPrice = 8.95},
-                new MenuItem{SubcategoryID=6, MenuItemName="Vegas", Piece=10, Cooked=false, Vegetarian=false,
+                new MenuItem{SubcategoryID=6, MenuPictureID=14, MenuItemName="Vegas", Piece=10, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Fresh salmon, cream cheese, avocado, scallions, jalapeño, top with dynamite and sweet sauces",
                 MenuItemPrice = 7.25},
-                new MenuItem{SubcategoryID=6, MenuItemName="Eskimo	", Piece=6, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=6, MenuPictureID=15, MenuItemName="Eskimo	", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Smoked salmon, snow crab, cream cheese, avocado, cucumber, topped with sweet wasabi sauce",
                 MenuItemPrice = 8.95},
-                new MenuItem{SubcategoryID=6, MenuItemName="Cali Crunch", Piece=10, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=6, MenuPictureID=16, MenuItemName="Cali Crunch", Piece=10, Cooked=true, Vegetarian=false,
                 MenuItemDescription="California roll with sweet sauce",
                 MenuItemPrice = 5.25},
 
                 // Grills 
+
+                // Teryaki
                 new MenuItem{SubcategoryID=7, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Marinated in our delicious blend of garlic, ginger, brown sugar, Fuji apples, sherry, and soy sauce. Grilled and served with rice",
                 MenuItemPrice = 9.95},
@@ -188,7 +190,8 @@ namespace UnamiSushi.DAL
                 MenuItemDescription="Marinated in our delicious blend of garlic, ginger, brown sugar, Fuji apples, sherry, and soy sauce. Grilled and served with rice",
                 MenuItemPrice = 10.95},
 
-                new MenuItem{SubcategoryID=8, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
+                // Stiry Fry
+                new MenuItem{SubcategoryID=8, MenuPictureID=17, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha ",
                 MenuItemPrice = 8.95},
                 new MenuItem{SubcategoryID=8, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
@@ -197,10 +200,11 @@ namespace UnamiSushi.DAL
                 new MenuItem{SubcategoryID=8, MenuItemName="Sirloin Steak", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha ",
                 MenuItemPrice = 10.95},
-                new MenuItem{SubcategoryID=8, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
+                new MenuItem{SubcategoryID=8, MenuPictureID=18, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha ",
                 MenuItemPrice = 10.95},
 
+                // Japenese Curry
                 new MenuItem{SubcategoryID=9, MenuItemName="Tofu Japansese", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, and carrots, in a delicious brown curry sauce. Served with white rice and a side of sriracha chili sauce",
                 MenuItemPrice = 8.95},
@@ -213,18 +217,87 @@ namespace UnamiSushi.DAL
                 new MenuItem{SubcategoryID=9, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, and carrots, in a delicious brown curry sauce. Served with white rice and a side of sriracha chili sauce",
                 MenuItemPrice = 10.95},
+
+                // Sweet & Sour 
+                 new MenuItem{SubcategoryID=10, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 8.95},
+                new MenuItem{SubcategoryID=10, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 9.95},
+                new MenuItem{SubcategoryID=10, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 10.95},
+
+                // General TSO's 
+                new MenuItem{SubcategoryID=11, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 8.95},
+                new MenuItem{SubcategoryID=11, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 9.95},
+                new MenuItem{SubcategoryID=11, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemPrice = 10.95},
+
+                // Orange
+                new MenuItem{SubcategoryID=12, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles",
+                MenuItemPrice = 8.95},
+                new MenuItem{SubcategoryID=12, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles",
+                MenuItemPrice = 9.95},
+                new MenuItem{SubcategoryID=12, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles",
+                MenuItemPrice = 10.95},
             };
             menuItems.ForEach(s => context.MenuItems.Add(s));
             context.SaveChanges();
 
             var menuPictures = new List<MenuPicture>
             {
-                new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/SushiRoll1.jpg", 
+                //Sushidos
+                new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/California Sushi Burrito.jpg", 
                                 ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
-                new MenuPicture{MenuItemID=2, PicturePathname="~/Photos/Normal/SushiRoll2.jpg",
+                new MenuPicture{MenuItemID=7, PicturePathname="~/Photos/Normal/Bacon Sushi Burrito.jpg",
                                 ThumbnailPathname="~/Photos/Thumbnail/pictur1.jpg"},
-                new MenuPicture{MenuItemID=3, PicturePathname="~/Photos/Normal/SushiRoll3.jpg",
+                //Sushi Rolls
+                new MenuPicture{MenuItemID=20, PicturePathname="~/Photos/Normal/California Roll.jpg",
                                 ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=21, PicturePathname="~/Photos/Normal/Philly Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=22, PicturePathname="~/Photos/Normal/Spicy Salmon Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=27, PicturePathname="~/Photos/Normal/Squidward Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=28, PicturePathname="~/Photos/Normal/Trident Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=29, PicturePathname="~/Photos/Normal/Florida Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=30, PicturePathname="~/Photos/Normal/Super Panda Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=32, PicturePathname="~/Photos/Normal/Tiger Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=34, PicturePathname="~/Photos/Normal/Alaskan Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=38, PicturePathname="~/Photos/Normal/California Wonton Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=39, PicturePathname="~/Photos/Normal/Wolverine Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=40, PicturePathname="~/Photos/Normal/Vegas Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=41, PicturePathname="~/Photos/Normal/Eskimo Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=42, PicturePathname="~/Photos/Normal/California Crunch Roll.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+
+                //Asian Grills
+                new MenuPicture{MenuItemID=46, PicturePathname="~/Photos/Normal/Tofu Stirfry.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+                new MenuPicture{MenuItemID=49, PicturePathname="~/Photos/Normal/Shrimp Stirfry.jpg",
+                                ThumbnailPathname="~/Photos/Thumbnail/pictur3.jpg"},
+
+
             };
             menuPictures.ForEach(s => context.MenuPictures.Add(s));
             context.SaveChanges();
