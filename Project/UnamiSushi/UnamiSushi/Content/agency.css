@@ -267,7 +267,6 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -882,12 +881,12 @@ ul.social-buttons li a:active {
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136;
+    background: #999;
 }
 
 ::selection {
     text-shadow: none;
-    background: #fed136;
+    background: #999;
 }
 
 img::selection {
@@ -1080,4 +1079,31 @@ body {
     }*/
 
 
+}
+
+#upper-nav-bar{
+    height:25px; 
+    position:fixed; 
+    margin-bottom:25px; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index:99999; 
+    background-color: black; 
+    
+    text-align: right;
+}
+
+#upper-nav-bar ul li {
+    display: inline;
+    padding-left: 5px;
+    
+}
+
+#upper-nav-bar ul li a{
+    color: white; 
+}
+
+#upper-nav-bar ul li a:hover{
+    color: #5292D1; 
 }
