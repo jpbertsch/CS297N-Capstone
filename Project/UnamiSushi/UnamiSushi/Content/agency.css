@@ -355,7 +355,7 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding-top: 100px;
+    /*padding-top: 100px;*/
     background-color: white;
 }
 
@@ -376,7 +376,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        /*padding: 100px 0;*/
     }
 }
 

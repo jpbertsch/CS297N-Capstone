@@ -299,6 +299,8 @@
     <Content Include="Views\Subcategory\Details.cshtml" />
     <Content Include="Views\Subcategory\Edit.cshtml" />
     <Content Include="Views\Subcategory\Index.cshtml" />
+    <Content Include="Views\Shared\Menu_Layout.cshtml" />
+    <Content Include="Views\Shared\Standard_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
