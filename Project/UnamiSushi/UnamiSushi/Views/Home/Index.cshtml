@@ -31,7 +31,18 @@
 </head>
 <body id="page-top" class="index">
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container" id="upper-nav-bar">
+        <ul>
+            <li>
+                @Html.ActionLink("Register", "Register", "Account")
+            </li>
+            <li>
+                @Html.ActionLink("Log In", "Login", "Account")
+            </li>
+        </ul>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-fixed-top"style="margin-top:25px;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">

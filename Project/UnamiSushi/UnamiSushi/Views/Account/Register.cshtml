@@ -3,9 +3,7 @@
     ViewBag.Title = "Register";
 }
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +34,17 @@
 </head>
 <body id="page-top" class="index">
     <!-- Navigation -->
+    <div class="container" id="upper-nav-bar">
+        <ul>
+            <li>
+                @Html.ActionLink("Register", "Register", "Account")
+            </li>
+            <li>
+                @Html.ActionLink("Log In", "Login", "Account")
+            </li>
+        </ul>
+    </div>
+    
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -46,7 +55,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Unami Sushi</a>
+                <a class="navbar-brand page-scroll" @Html.ActionLink("Unami Sushi", "Index", "Home")></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -156,3 +165,7 @@
     <script src="~/Scripts/agency.js"></script>
 </body>
 </html>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
