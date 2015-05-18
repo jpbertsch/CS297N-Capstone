@@ -16,6 +16,13 @@ namespace UnamiSushi.Models
             // Add custom user claims here
             return userIdentity;
         }
+        
+        public virtual ICollection<Comment> Comments { get; set; }
+    }
+
+    public class Administrator : ApplicationUser
+    {
+        public virtual ICollection<Reply> Replies { get; set; }
     }
 
     
