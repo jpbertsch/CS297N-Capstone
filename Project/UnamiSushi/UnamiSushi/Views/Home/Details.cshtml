@@ -52,20 +52,23 @@
                                 <td align="left">
 
                                     @{
-                            string imageString;
+                                        string imageString;
 
-                            if (false)
-                            {
-                                imageString = menuItem.MenuPictures.First().PicturePathname;
-                            }
-                            else
-                            {
-                                imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
-                            }
+                                        
+                                        
+                                        //if(menuItem.MenuPictures.Count > 0)
+                                        if (false)
+                                        {
+                                            //imageString = menuItem.MenuPictures.AsQueryable().FirstOrDefault().ThumbnailPathname;
+                                        }
+                                        else
+                                        {
+                                            imageString = "/Photos/Normal/SushiRoll1.jpg"; //This will later be a default no image thumbnail
+                                        }
 
-                            <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
-                            </a>
+                                        <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                            <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;" />
+                                        </a>
 
 
                                     }

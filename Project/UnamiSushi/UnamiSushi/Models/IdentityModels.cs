@@ -20,10 +20,10 @@ namespace UnamiSushi.Models
         //public virtual ICollection<Comment> Comments { get; set; }
     }
 
-    public class Administrator : ApplicationUser
-    {
-        //public virtual ICollection<Reply> Replies { get; set; }
-    }
+    //public class Administrator : ApplicationUser
+    //{
+    //    public virtual ICollection<Reply> Replies { get; set; }
+    //}
 
     
         public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -12,8 +12,6 @@ namespace UnamiSushi.Models
         public int MenuItemID { get; set; } //Primary Key
 
         public int SubcategoryID { get; set; }// foreign key
-
-        public int? MenuPictureID { get; set; }// menu picture foregin key
       
         public string MenuItemName { get; set; } //Short name of the particular dish
 
@@ -31,7 +29,7 @@ namespace UnamiSushi.Models
         //public string ThumbnailPathname { get; set; } 
 
 
-        public virtual ICollection<MenuPicture> MenuPictures { get; set; }
+        public virtual IEnumerable<MenuPicture> MenuPictures { get; set; }
 
         public virtual ICollection<Comment> ItemComments { get; set; }
 
