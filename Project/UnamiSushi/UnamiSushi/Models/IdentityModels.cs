@@ -17,15 +17,15 @@ namespace UnamiSushi.Models
             return userIdentity;
         }
         
-        public virtual ICollection<Comment> Comments { get; set; }
+        //public virtual ICollection<Comment> Comments { get; set; }
     }
 
     public class Administrator : ApplicationUser
     {
-        public virtual ICollection<Reply> Replies { get; set; }
+        //public virtual ICollection<Reply> Replies { get; set; }
     }
 
-    /*
+    
         public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             public ApplicationDbContext()
@@ -38,5 +38,5 @@ namespace UnamiSushi.Models
                 return new ApplicationDbContext();
             }
         }
-    */
+    
 }

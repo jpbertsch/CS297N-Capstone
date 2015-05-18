@@ -301,6 +301,7 @@
     <Content Include="Views\Subcategory\Index.cshtml" />
     <Content Include="Views\Shared\Menu_Layout.cshtml" />
     <Content Include="Views\Shared\Standard_Layout.cshtml" />
+    <Content Include="Views\Shared\Home_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
