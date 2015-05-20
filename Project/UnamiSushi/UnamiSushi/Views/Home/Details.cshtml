@@ -56,10 +56,14 @@
 
                                         
                                         
-                                        //if(menuItem.MenuPictures.Count > 0)
-                                        if (false)
+                                        if(menuItem.MenuPictures.Count > 0)
                                         {
-                                            //imageString = menuItem.MenuPictures.AsQueryable().FirstOrDefault().ThumbnailPathname;
+                                            var menuPictures = (ICollection<UnamiSushi.Models.MenuPicture>)menuItem.MenuPictures;
+
+
+
+                                            imageString = menuPictures.FirstOrDefault().ThumbnailPathname;
+                                            //imageString = "/Photos/Normal/SushiRoll2.jpg";
                                         }
                                         else
                                         {

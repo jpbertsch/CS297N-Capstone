@@ -29,7 +29,7 @@ namespace UnamiSushi.Models
         //public string ThumbnailPathname { get; set; } 
 
 
-        public virtual IEnumerable<MenuPicture> MenuPictures { get; set; }
+        public virtual ICollection<MenuPicture> MenuPictures { get; set; }
 
         public virtual ICollection<Comment> ItemComments { get; set; }
 

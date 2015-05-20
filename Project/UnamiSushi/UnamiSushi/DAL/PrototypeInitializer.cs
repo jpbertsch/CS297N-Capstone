@@ -259,7 +259,7 @@ namespace UnamiSushi.DAL
             {
                 //Sushidos
                 new MenuPicture{MenuItemID=1, PicturePathname="~/Photos/Normal/CaliforniaSushiBurrito.jpg", 
-                                ThumbnailPathname="~/Photos/Normal/California SushiBurritoThumb.jpg"},
+                                ThumbnailPathname="~/Photos/Normal/CaliforniaSushiBurritoThumb.jpg"},
                 new MenuPicture{MenuItemID=7, PicturePathname="~/Photos/Normal/BaconSushiBurrito.jpg",
                                 ThumbnailPathname="~/Photos/Normal/BaconSushiBurritoThumb.jpg"},
                 //Sushi Rolls
