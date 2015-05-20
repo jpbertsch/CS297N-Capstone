@@ -373,7 +373,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        /*padding: 100px 0;*/
+        padding: 100px 0;
     }
 }
 
@@ -781,16 +781,18 @@ ul.social-buttons li a {
     line-height: 40px;
     outline: 0;
     color: #fff;
-    background-color: #222;
+    background-color: limegreen;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
 }
 
-ul.social-buttons li a:hover,
+ul.social-buttons li a:hover{
+    background-color: #5292D1;
+}
 ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
-    background-color: #fed136;
+    background-color: #5292D1;
 }
 
 .btn:focus,
