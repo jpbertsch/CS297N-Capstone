@@ -3,42 +3,38 @@
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/Standard_Layout.cshtml";
+
+    string imageString;
+        
+    if(Model.MenuPictures.Count > 0)
+        { imageString = Model.MenuPictures.FirstOrDefault().PicturePathname; }
+        else
+        { imageString = "/Photos/Normal/Default.JPG"; }
 }
 
-<h2>Details</h2>
+<section>
+    <div class="container">
 
-<div>
-    <h4>MenuItem</h4>
-    <hr />
-    <dl class="dl-horizontal">
-    
+        <img src="@Url.Content(imageString)" alt="image" width="800" height="600"/>
+
+        <dl class="dl-horizontal">
         
-        @*<dt> @Html.DisplayNameFor(model => model.CategoryName) </dt>
-        <dd> @Html.DisplayFor(model => model.CategoryName) </dd>*@
-        
-        
-        @Html.DisplayFor(model => model.MenuItemName)
+            @Html.DisplayFor(model => model.MenuItemName)
 
-        @Html.DisplayFor(model => model.MenuItemDescription)
+            @Html.DisplayFor(model => model.MenuItemDescription)
 
-        @Html.DisplayFor(model => model.MenuItemPrice)
+            @Html.DisplayFor(model => model.MenuItemPrice)
 
-    @*@foreach (var item in Model.ItemComments)
-    {
-        <div>
-        
-        <img src="@imageString" alt="image" width="200" height="150" />*@
+            @*@foreach (var comment in Model.ItemComments)
+            {
+                @Html.DisplayFor(item => comment.UserID)
+                @Html.DisplayFor(item => comment.CommentDate)
+                @Html.DisplayFor(item => comment.CommentContents)
+            }*@
 
-        @*@Html.DisplayFor(item => item.UserID)
-        @Html.DisplayFor(item => item.CommentDate)
-        @Html.DisplayFor(item => item.CommentContents)*@
-        
-        </div>
-    }
-    
-
-    </dl>
-</div>
+        </dl>
+    </div>
+</section>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MenuItemID }) |
     @Html.ActionLink("Back to List", "Index")
