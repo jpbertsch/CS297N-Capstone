@@ -1,0 +1,45 @@
+﻿@model UnamiSushi.Models.MenuItem
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/Standard_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MenuItem</h4>
+    <hr />
+    <dl class="dl-horizontal">
+    
+        
+        @*<dt> @Html.DisplayNameFor(model => model.CategoryName) </dt>
+        <dd> @Html.DisplayFor(model => model.CategoryName) </dd>*@
+        
+        
+        @Html.DisplayFor(model => model.MenuItemName)
+
+        @Html.DisplayFor(model => model.MenuItemDescription)
+
+        @Html.DisplayFor(model => model.MenuItemPrice)
+
+    @*@foreach (var item in Model.ItemComments)
+    {
+        <div>
+        
+        <img src="@imageString" alt="image" width="200" height="150" />*@
+
+        @*@Html.DisplayFor(item => item.UserID)
+        @Html.DisplayFor(item => item.CommentDate)
+        @Html.DisplayFor(item => item.CommentContents)*@
+        
+        </div>
+    }
+    
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MenuItemID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

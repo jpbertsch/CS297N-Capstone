@@ -1,0 +1,98 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/Home_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> @ViewBag.Title </title>
+</head>
+
+<body id="page-top" class="index">
+
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Welcome To Unami Sushi!</div>
+                <div class="intro-heading">Try Our Sushi Burrito!</div>
+                <a href="#sushido" class="page-scroll btn btn-xl">Tell Me More!</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sushido" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Sushi Burritos</h2>
+                    <h3 class="section-subheading text-muted">WIP!: This is a section about our sushi burritos</h3>
+                    @Html.ActionLink("Sushi", "Menu", "Home", null, null, "Sushi-Burritos", null, null)
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="menu" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Menu</h2>
+                    <h3 class="section-subheading text-muted">Take a look at our wide selection of delicious food</h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h4 class="service-heading">@Html.ActionLink("Sushi", "Menu", "Home", null, null, "Sushi-Rolls", null, null)</h4>
+                    <p class="text-muted">WIP!: Click here to see the menu list for our sushi rolls</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">@Html.ActionLink("Appetizers", "Menu", "Home", null, null, "Appetizers", null, null)</h4>
+                    <p class="text-muted">WIP!: Click here to see the menu list for our appetizers</p>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="service-heading">@Html.ActionLink("Asian Grill", "Menu", "Home", null, null, "Asian-Grill", null, null)</h4>
+                    <p class="text-muted">WIP!: Click here to see the menu list for our asian grill</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutus" style="border-bottom: 2px solid black">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About us at Unami Sushi</h2>
+                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About us at Unami Sushi</h2>
+                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">About us at Unami Sushi</h2>
+                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="register">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Register and let your voice be heard</h2>
+                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
+            </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Register and let your voice be heard</h2>
+                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
+            </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Register and let your voice be heard</h2>
+                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
