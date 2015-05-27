@@ -19,6 +19,7 @@ namespace UnamiSushi.Models
         
         //public virtual ICollection<Comment> Comments { get; set; }
     }
+    // ADD OUR OWN CUSTOM FIELD LIKE BIRTHDATE OR FAVORITE COLOR FOR USER INFO
 
     //public class Administrator : ApplicationUser
     //{
@@ -29,7 +30,7 @@ namespace UnamiSushi.Models
         public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         {
             public ApplicationDbContext()
-                : base("DefaultConnection", throwIfV1Schema: false)
+                : base("PrimaryContext", throwIfV1Schema: false)
             {
             }
     
