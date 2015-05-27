@@ -3,10 +3,4 @@
   <parameter name="PrimaryContext-Web.config Connection String" description="PrimaryContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MenuDatabase2.mdf;Initial Catalog=MenuDatabase2;Integrated Security=True;" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PrimaryContext']/@connectionString" />
   </parameter>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="DefaultConnection_ConnectionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="PrimaryContext_DatabasePublish-Web.config Connection String" description="PrimaryContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="PrimaryContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\waffles\\Documents\\GitHub\\CS297N-Capstone\\Project\\UnamiSushi\\UnamiSushi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='PrimaryContext_DatabasePublish']/@connectionString" />
-  </parameter>
 </parameters>

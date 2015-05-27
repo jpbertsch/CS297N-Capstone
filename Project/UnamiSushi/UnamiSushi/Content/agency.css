@@ -903,9 +903,9 @@ body {
     background-color:black;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 320px) {
     h4{
-        display:none;
+        /*display:none;*/
         /*-ms-transform: scale(.5,.5);  IE 9 */
         /*-webkit-transform: scale(.5,.5);  Safari */
         /*transform: scale(.5,.5);  /* Standard syntax */
@@ -956,6 +956,61 @@ body {
 
 
 }
+
+@media (max-width: 480px) {
+    h4{
+        /*display:none;*/
+        /*-ms-transform: scale(.5,.5);  IE 9 */
+        /*-webkit-transform: scale(.5,.5);  Safari */
+        /*transform: scale(.5,.5);  /* Standard syntax */
+    }
+
+    section{
+        padding-top: 10px;
+    }
+    img{
+        display:none;
+    }
+    thread {
+        display: none;
+    }
+
+    th{
+        display: none;
+    }
+
+    tbody, tr, td {
+        display: block;
+    }
+   
+    td{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    td[title="Description"]{
+        border-bottom: 1px solid black;
+    }
+
+    img{
+        float: none;
+        align-content:center;
+    }
+
+    /*td:before {
+        content: attr(data-title);
+        white-space: pre;
+        padding-left:30px;
+        display: inline-block;
+        font-weight: bold;
+        left: 10px;
+        margin-right: 15px;
+        position:absolute;
+    }*/
+
+
+}
+
 
 @media (max-width: 768px) {
     /*h4{
