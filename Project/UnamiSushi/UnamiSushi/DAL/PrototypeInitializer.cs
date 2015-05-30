@@ -13,8 +13,9 @@ namespace UnamiSushi.DAL
              var menuCategories = new List<MenuCategory>
             {
                 new MenuCategory{CategoryID=1, CategoryName="Sushi-Burritos", CategoryDescription="Sushi combined into a burrito rice wrap"},
-                new MenuCategory{CategoryID=2, CategoryName="Asian-Grill", CategoryDescription="Asian Grills are your traditional cooked japansese foods like teryaki, stir-fry, and curries"},
-                new MenuCategory{CategoryID=3, CategoryName="Sushi-Rolls", CategoryDescription="Contains your classic california roll to special rolls"},
+                new MenuCategory{CategoryID=2, CategoryName="Sushi-Rolls", CategoryDescription="Contains your classic california roll to special rolls"},
+                new MenuCategory{CategoryID=3, CategoryName="Asian-Grill", CategoryDescription="Asian Grills are your traditional cooked japansese foods like teryaki, stir-fry, and curries"},
+                new MenuCategory{CategoryID=4, CategoryName="Appetizers", CategoryDescription="A wide selection of our delicious appetizers"},
             };
             menuCategories.ForEach(s => context.MenuCategories.Add(s));
             context.SaveChanges();
@@ -25,16 +26,18 @@ namespace UnamiSushi.DAL
                 new Subcategory{SubcategoryID=2, SubcategoryName="Premium Sushidos", CategoryID=1, SubcategoryDescription="Based on special sushi rolls"},//2
                 new Subcategory{SubcategoryID=3, SubcategoryName="Veggie Sushidos", CategoryID=1, SubcategoryDescription="Sushidos for vegearians"},//3
 
-                new Subcategory{SubcategoryID=4, SubcategoryName="Original Rolls",CategoryID=3, SubcategoryDescription="Classic simple rolls"},//4
-                new Subcategory{SubcategoryID=5, SubcategoryName="Special Rolls", CategoryID=3, SubcategoryDescription="Sushi rolls with a twist"},//5
-                new Subcategory{SubcategoryID=6, SubcategoryName="Tempura Rolls", CategoryID=3, SubcategoryDescription="Don't even know"},//6
+                new Subcategory{SubcategoryID=4, SubcategoryName="Original Rolls",CategoryID=2, SubcategoryDescription="Classic simple rolls"},//4
+                new Subcategory{SubcategoryID=5, SubcategoryName="Special Rolls", CategoryID=2, SubcategoryDescription="Sushi rolls with a twist"},//5
+                new Subcategory{SubcategoryID=6, SubcategoryName="Tempura Rolls", CategoryID=2, SubcategoryDescription="Don't even know"},//6
 
-                new Subcategory{SubcategoryID=7, SubcategoryName="Teryaki", CategoryID=2, SubcategoryDescription="Marinated in our delicious blend of garlic, ginger, brown sugar, Fuji apples, sherry, and soy sauce. Grilled and served with rices"},
-                new Subcategory{SubcategoryID=8, SubcategoryName="Stir-Fry", CategoryID=2, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha "},
-                new Subcategory{SubcategoryID=9, SubcategoryName="Japanese Curry", CategoryID=2, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, and carrots, in a delicious brown curry sauce. Served with white rice and a side of sriracha chili sauce"},
-                new Subcategory{SubcategoryID=10, SubcategoryName="Sweet & Sour", CategoryID=2, SubcategoryDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles"},
-                new Subcategory{SubcategoryID=11, SubcategoryName="General Tso’s", CategoryID=2, SubcategoryDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with choice of steamed white rice or noodles"},
-                new Subcategory{SubcategoryID=12, SubcategoryName="Orange", CategoryID=2, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles"},
+                new Subcategory{SubcategoryID=7, SubcategoryName="Teryaki", CategoryID=3, SubcategoryDescription="Marinated in our delicious blend of garlic, ginger, brown sugar, Fuji apples, sherry, and soy sauce. Grilled and served with rices"},
+                new Subcategory{SubcategoryID=8, SubcategoryName="Stir-Fry", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha "},
+                new Subcategory{SubcategoryID=9, SubcategoryName="Japanese Curry", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, and carrots, in a delicious brown curry sauce. Served with white rice and a side of sriracha chili sauce"},
+                new Subcategory{SubcategoryID=10, SubcategoryName="Sweet & Sour", CategoryID=3, SubcategoryDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles"},
+                new Subcategory{SubcategoryID=11, SubcategoryName="General Tso’s", CategoryID=3, SubcategoryDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with choice of steamed white rice or noodles"},
+                new Subcategory{SubcategoryID=12, SubcategoryName="Orange", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles"},
+            
+                new Subcategory{SubcategoryID=13, SubcategoryName="Appetizers", CategoryID=4, SubcategoryDescription="A varied selection of small starter dishes."}
             };
             subcategories.ForEach(s => context.Subcategories.Add(s));
             context.SaveChanges();
@@ -250,6 +253,29 @@ namespace UnamiSushi.DAL
                 new MenuItem{MenuItemID=62, SubcategoryID=12, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles",
                 MenuItemPrice = 10.95},
+
+                // Appetizers
+                new MenuItem{MenuItemID=63, SubcategoryID=13, MenuItemName="Crispy Stuffed Shrooms", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Fresh mushrooms panko breaded and quick fried, stuffed with chili cream cheese, spicy tuna and topped with a roasted garlic sauce",
+                MenuItemPrice = 7.95},
+                new MenuItem{MenuItemID=64, SubcategoryID=13, MenuItemName="Pork Gyozas", Piece=6, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Pork and vegetable pot stickers, choose steamed or deep fried. Served with sweet chili sauce and sriracha chili vinegar soy sauce",
+                MenuItemPrice = 5.25},
+                new MenuItem{MenuItemID=65, SubcategoryID=13, MenuItemName="Coconut Shrimp", Piece=6, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Coconut breaded shrimp fried and served with sweet mango sauce",
+                MenuItemPrice = 6.95},
+                new MenuItem{MenuItemID=66, SubcategoryID=13, MenuItemName="Tempura", Piece=6, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Your choice of shrimp, calamari, or vegetables hand battered and lightly fried. Served with sweet sake soy sauce",
+                MenuItemPrice = 5.49},
+                new MenuItem{MenuItemID=67, SubcategoryID=13, MenuItemName="Vegetable Spring Rolls", Piece=6, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Vegetables rolled in a thin spring roll wrap and fried until crispy. Served with sweet chili sauce",
+                MenuItemPrice = 5.25},
+                new MenuItem{MenuItemID=68, SubcategoryID=13, MenuItemName="Edamame", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Boiled soybeans sprinkled with kosher salt",
+                MenuItemPrice = 3.49},
+                new MenuItem{MenuItemID=69, SubcategoryID=13, MenuItemName="Ginger Poke` Salad", Piece=0, Cooked=true, Vegetarian=false,
+                MenuItemDescription="Chopped salmon poke, avocado, cucumber, and wakame salad",
+                MenuItemPrice = 9.95},
             };
             menuItems.ForEach(s => context.MenuItems.Add(s));
             context.SaveChanges();
@@ -297,6 +323,9 @@ namespace UnamiSushi.DAL
                 new MenuPicture{PictureID=18, MenuItemID=49, PicturePathname="~/Photos/Normal/ShrimpStirfry.jpg",
                                 ThumbnailPathname="~/Photos/Normal/ShrimpStirfryThumb.jpg"},
 
+                //Appetizers
+                new MenuPicture{PictureID=19, MenuItemID=69, PicturePathname="~/Photos/Normal/gingerpokesalad.jpg",
+                                ThumbnailPathname="~/Photos/Normal/gingerpokesaladThumb.jpg"},
 
             };
             menuPictures.ForEach(s => context.MenuPictures.Add(s));
