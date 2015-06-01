@@ -23,7 +23,7 @@ namespace UnamiSushi.Migrations
                 new MenuCategory{CategoryID=3, CategoryName="Asian-Grill", CategoryDescription="Asian Grills are your traditional cooked japansese foods like teryaki, stir-fry, and curries"},
                 new MenuCategory{CategoryID=4, CategoryName="Appetizers", CategoryDescription="A wide selection of our delicious appetizers"},
             };
-            menuCategories.ForEach(s => context.MenuCategories.Add(s));
+            menuCategories.ForEach(s => context.MenuCategories.AddOrUpdate(s));
             context.SaveChanges();
 
             var subcategories = new List<Subcategory>
@@ -40,12 +40,12 @@ namespace UnamiSushi.Migrations
                 new Subcategory{SubcategoryID=8, SubcategoryName="Stir-Fry", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, carrots, and celery in a garlic rice wine soy. Choice of white rice or noodles. Served with a side of sriracha "},
                 new Subcategory{SubcategoryID=9, SubcategoryName="Japanese Curry", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, broccoli, and carrots, in a delicious brown curry sauce. Served with white rice and a side of sriracha chili sauce"},
                 new Subcategory{SubcategoryID=10, SubcategoryName="Sweet & Sour", CategoryID=3, SubcategoryDescription="Hand battered and tossed in our delicious sweet & sour sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles"},
-                new Subcategory{SubcategoryID=11, SubcategoryName="General Tso’s", CategoryID=3, SubcategoryDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with choice of steamed white rice or noodles"},
+                new Subcategory{SubcategoryID=11, SubcategoryName="General Tsoâ€™s", CategoryID=3, SubcategoryDescription="Hand battered and tossed in our delicious spicy General Tsoâ€™s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with choice of steamed white rice or noodles"},
                 new Subcategory{SubcategoryID=12, SubcategoryName="Orange", CategoryID=3, SubcategoryDescription="Stir-fried onions, mushroom, red bell peppers, and broccoli in our delicious ginger orange sauce. Served with choice of steamed white rice or noodles"},
             
                 new Subcategory{SubcategoryID=13, SubcategoryName="Appetizers", CategoryID=4, SubcategoryDescription="A varied selection of small starter dishes."}
             };
-            subcategories.ForEach(s => context.Subcategories.Add(s));
+            subcategories.ForEach(s => context.Subcategories.AddOrUpdate(s));
             context.SaveChanges();
 
             var menuItems = new List<MenuItem>
@@ -160,7 +160,7 @@ namespace UnamiSushi.Migrations
                 MenuItemDescription="Hard Smoked salmon, cream cheese, cucumber, top w/avocado, salmon and sweet wasabi sauce",
                 MenuItemPrice = 12.49},
                 new MenuItem{MenuItemID=35, SubcategoryID=5, MenuItemName="Dynamite", Piece=8, Cooked=false, Vegetarian=false,
-                MenuItemDescription="Tempura shrimp, cucumber, top with avocado, yellowtail, spicy tuna, jalapeño, dynamite sauce",
+                MenuItemDescription="Tempura shrimp, cucumber, top with avocado, yellowtail, spicy tuna, jalapeÃ±o, dynamite sauce",
                 MenuItemPrice = 15.95},
                 new MenuItem{MenuItemID=36, SubcategoryID=5, MenuItemName="Atlantis", Piece=8, Cooked=false, Vegetarian=false,
                 MenuItemDescription="Tempura soft shell crab topped with avocado, fresh salmon, eel, snow crab, and spicy tare` sauce",
@@ -177,7 +177,7 @@ namespace UnamiSushi.Migrations
                 MenuItemDescription="Spicy tuna, snow crab, spicy cream cheese, avocado, cucumber, top with sweet garlic and spicy sauces",
                 MenuItemPrice = 8.95},
                 new MenuItem{MenuItemID=40, SubcategoryID=6, MenuItemName="Vegas", Piece=10, Cooked=false, Vegetarian=false,
-                MenuItemDescription="Fresh salmon, cream cheese, avocado, scallions, jalapeño, top with dynamite and sweet sauces",
+                MenuItemDescription="Fresh salmon, cream cheese, avocado, scallions, jalapeÃ±o, top with dynamite and sweet sauces",
                 MenuItemPrice = 7.25},
                 new MenuItem{MenuItemID=41, SubcategoryID=6, MenuItemName="Eskimo	", Piece=6, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Smoked salmon, snow crab, cream cheese, avocado, cucumber, topped with sweet wasabi sauce",
@@ -240,13 +240,13 @@ namespace UnamiSushi.Migrations
 
                 // General TSO's 
                 new MenuItem{MenuItemID=57, SubcategoryID=11, MenuItemName="Tofu", Piece=0, Cooked=true, Vegetarian=false,
-                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tsoâ€™s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
                 MenuItemPrice = 8.95},
                 new MenuItem{MenuItemID=58, SubcategoryID=11, MenuItemName="Chicken", Piece=0, Cooked=true, Vegetarian=false,
-                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tsoâ€™s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
                 MenuItemPrice = 9.95},
                 new MenuItem{MenuItemID=59, SubcategoryID=11, MenuItemName="Tiger Shrimp", Piece=0, Cooked=true, Vegetarian=false,
-                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tso’s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
+                MenuItemDescription="Hand battered and tossed in our delicious spicy General Tsoâ€™s sauce with stir-fried onions, mushrooms, bell peppers, and broccoli. Served with  choice of white rice or noodles",
                 MenuItemPrice = 10.95},
 
                 // Orange
@@ -283,7 +283,7 @@ namespace UnamiSushi.Migrations
                 MenuItemDescription="Chopped salmon poke, avocado, cucumber, and wakame salad",
                 MenuItemPrice = 9.95},
             };
-            menuItems.ForEach(s => context.MenuItems.Add(s));
+            menuItems.ForEach(s => context.MenuItems.AddOrUpdate(s));
             context.SaveChanges();
 
             var menuPictures = new List<MenuPicture>
@@ -334,7 +334,7 @@ namespace UnamiSushi.Migrations
                                 ThumbnailPathname="~/Photos/Normal/gingerpokesaladThumb.jpg"},
 
             };
-            menuPictures.ForEach(s => context.MenuPictures.Add(s));
+            menuPictures.ForEach(s => context.MenuPictures.AddOrUpdate(s));
             context.SaveChanges();
 
             var replies = new List<Reply>
@@ -343,7 +343,7 @@ namespace UnamiSushi.Migrations
                 new Reply{CommentID=2, UserID=5, CommentDate=DateTime.Parse("2015-03-15"), CommentContents="Tis da bomb diggity"},
                 new Reply{CommentID=3, UserID=6, CommentDate=DateTime.Parse("2015-01-12"), CommentContents="Burrito Sushi say whaaa?"}
             };
-            replies.ForEach(s => context.Replies.Add(s));
+            replies.ForEach(s => context.Replies.AddOrUpdate(s));
             context.SaveChanges();
 
             var comments = new List<Comment>
@@ -352,7 +352,7 @@ namespace UnamiSushi.Migrations
                 new Comment{MenuItemID=1, UserID=2, CommentDate=DateTime.Parse("2015-04-07"), CommentContents="This changed my life forever"},
                 new Comment{MenuItemID=1, UserID=3, CommentDate=DateTime.Parse("2015-02-21"), CommentContents="Defintely coming back here for more!"},
             };
-            comments.ForEach(s => context.Comments.Add(s));
+            comments.ForEach(s => context.Comments.AddOrUpdate(s));
             context.SaveChanges();
 
         }
