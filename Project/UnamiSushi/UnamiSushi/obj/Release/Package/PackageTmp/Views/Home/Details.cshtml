@@ -5,8 +5,7 @@
 <div style="visibility: visible;">
     @if (Model != null)
     {
-        <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
-        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Cooked</h4>   
+        <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>  
         <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Raw</h4>
         <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Vegetarian</h4>
 
@@ -67,7 +66,7 @@
                                         }
                                         else
                                         {
-                                            imageString = "/Photos/Normal/DefaultThumb.JPG"; //This will later be a default no image thumbnail
+                                            imageString = "/Photos/Normal/MissingThumb.PNG"; //This will later be a default no image thumbnail
                                         }
 
                                         <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">

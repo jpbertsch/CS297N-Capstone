@@ -2,16 +2,12 @@
 
 @{
     Layout = null;
+    Layout = "~/Views/Shared/Standard_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Create2</title>
-</head>
-<body>
+<section>
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -91,5 +87,4 @@
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>
-</body>
-</html>
+</section>

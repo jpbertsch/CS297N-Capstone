@@ -9,31 +9,58 @@
     if(Model.MenuPictures.Count > 0)
         { imageString = Model.MenuPictures.FirstOrDefault().PicturePathname; }
         else
-        { imageString = "/Photos/Normal/Default.JPG"; }
+        { imageString = "/Photos/Normal/MissingPic.PNG"; }
 }
 
 <section>
     <div class="container">
+        <div class="col-md-9">
+            <img src="@Url.Content(imageString)" alt="image" width="800" height="600" style="border-radius:50px;"/>
+            </div>
+            @*<dl class="dl-horizontal">
 
-        <img src="@Url.Content(imageString)" alt="image" width="800" height="600"/>
+                @Html.DisplayFor(model => model.MenuItemName)
 
-        <dl class="dl-horizontal">
-        
-            @Html.DisplayFor(model => model.MenuItemName)
+                @Html.DisplayFor(model => model.MenuItemDescription)
 
-            @Html.DisplayFor(model => model.MenuItemDescription)
+                @Html.DisplayFor(model => model.MenuItemPrice)
 
-            @Html.DisplayFor(model => model.MenuItemPrice)
+                @foreach (var comment in Model.ItemComments)
+                {
+                    @Html.DisplayFor(item => comment.UserID)
+                    @Html.DisplayFor(item => comment.CommentDate)
+                    @Html.DisplayFor(item => comment.CommentContents)
+                }
 
-            @*@foreach (var comment in Model.ItemComments)
-            {
-                @Html.DisplayFor(item => comment.UserID)
-                @Html.DisplayFor(item => comment.CommentDate)
-                @Html.DisplayFor(item => comment.CommentContents)
-            }*@
+            </dl>*@
+        <div class="col-md-3">
+            <table cellspacing=" 0" width="100%">
 
-        </dl>
-    </div>
+                <thead>
+
+                    <tr>
+                        <th style="width: 250px;">
+                            @Html.DisplayFor(model => model.MenuItemName)
+                        </th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td title="Description" align="left">
+                            @Html.DisplayFor(model => model.MenuItemDescription)
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+            </div>
+        </div>
 </section>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.MenuItemID }) |
