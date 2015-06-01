@@ -666,7 +666,7 @@ section h3.section-subheading {
 
 .team-member img {
     margin: 0 auto;
-    border: 7px solid #fff;
+    border: 5px solid limegreen;
 }
 
 .team-member h4 {
@@ -785,6 +785,7 @@ ul.social-buttons li a {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+     
 }
 
 ul.social-buttons li a:hover{

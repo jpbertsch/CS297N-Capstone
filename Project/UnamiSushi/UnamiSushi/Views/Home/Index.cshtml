@@ -6,6 +6,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        ul.social-buttons li a.contactbutton {
+        -ms-transform: scale(2,2); 
+        -webkit-transform: scale(2,2);
+        transform: scale(2,2);}
+
+        p {
+            text-align:justify;
+            
+        }
+
+        img.aboutus {
+            width: 100%;
+            height:auto;
+        }
+    </style>
+    
     <title> @ViewBag.Title </title>
 </head>
 
@@ -37,21 +54,32 @@
     <section id="menu" style="border-bottom: 2px solid black">
         <div class="container">
             <div class="row">
+                <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Menu</h2>
                     <h3 class="section-subheading text-muted">Take a look at our wide selection of delicious food</h3>
                 </div>
             </div>
+            </div>
             <div class="row text-center">
                 <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="~/Photos/normal/baconsushiburrito.jpg" class="img-responsive img-circle" alt="">
+                    </div>
                     <h4 class="service-heading">@Html.ActionLink("Sushi", "Menu", "Home", null, null, "Sushi-Rolls", null, null)</h4>
                     <p class="text-muted">WIP!: Click here to see the menu list for our sushi rolls</p>
                 </div>
                 <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="~/Photos/normal/baconsushiburrito.jpg" class="img-responsive img-circle" alt="">
+                    </div>
                     <h4 class="service-heading">@Html.ActionLink("Appetizers", "Menu", "Home", null, null, "Appetizers", null, null)</h4>
                     <p class="text-muted">WIP!: Click here to see the menu list for our appetizers</p>
                 </div>
                 <div class="col-md-4">
+                    <div class="team-member">
+                        <img src="~/Photos/normal/baconsushiburrito.jpg" class="img-responsive img-circle" alt="">
+                    </div>
                     <h4 class="service-heading">@Html.ActionLink("Asian Grill", "Menu", "Home", null, null, "Asian-Grill", null, null)</h4>
                     <p class="text-muted">WIP!: Click here to see the menu list for our asian grill</p>
                 </div>
@@ -63,36 +91,86 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About us at Unami Sushi</h2>
-                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
+                    <h2 class="section-heading">About Us</h2>
+                    <h3 class="section-subheading text-muted">Find us on Facebook, google+ and Yelp!</h3>
                 </div>
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About us at Unami Sushi</h2>
-                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About us at Unami Sushi</h2>
-                    <h3 class="section-subheading text-muted">WIP!: Here we will give some info about the business</h3>
-                </div>
+            </div>
+            <div class="col-md-4">
+                <img src="~/Photos/normal/temp.jpg" class="aboutus"/>           
+                 <p>
+                    I'm originally from Oregon, born in Lebanon, and grew up in Portland. We moved to Missoula Montana when I was 10 years old. After 7th grade I was homeschooled
+                    from which I graduated when I was 16. I got my first restaurant job at the Montana Club, a large restaurant that grossed close to 10 million per year. There, I
+                    worked my way up from a dishwasher to running the line. While working at the Montana Club, I learned how to prepare many different types of cuisine from scratch,
+                    including French, Italian, Asian, American, and Spanish cuisines. With extra time in my schedule from having finished high school early, I got 2nd jobs at other
+                    restaurants in 2-3 month intervals and worked 70-80 hours a week just to learn more.   Originally planning on</p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    
+                    working at restaurants through college and just to
+                    have the life skill to cook, I really had no idea I would be this interested in the craft. I quickly soaked up as much information as I could about different types
+                    and styles of cooking. Soon I realized, the one I became most interested in was japanese style cooking and the sushi world. It seemed so exotic and I had never
+                    even eaten sushi so I knew nothing about it, and that is what intrigued me so much. So I went and applied at a sushi restaurant in Missoula that was just
+                    reopening. When I landed the job as a sushi chef in training I had no idea how much it would transform my life. Credit due to the owner, Sung Won Kim, he was a
+                    great teacher and he knew so much. He was born in Korea and learned how to make sushi in Japan, then moved to America and worked at sushi restaurants in
+                    California before opening his own 5 table restaurants in the bay area. He then opened a restaurant in Northern California and after much success decided to open a
+                    place in Montana where he wanted to retire. He opened Sushi Hana which was the first sushi restaurant in Montana in 1998. After family disputes he reopened the
+                    place 5 years later as Nara Korean BBQ and Sushi where I got a job when it first
+                </p>
+            </div>
+            <div class="col-md-4">
+                <p>
+                    opened.
+                    Working there and learning the craft for 5 years I opened my own sushi
+                    restaurant, 2nd Street Sushi, 50 miles south in a town called Hamilton. Lots of experimentation with fine dining types of food and business experience under my
+                    belt, I was ready to move back to Oregon so I sold the sushi restaurant and moved to Eugene/Springfield where my mom resides. We knew there was a nich in quick
+                    service sushi because other than the conveyerbelt places, they really didnt exist to my knowledge yet. So Abby sugessted we try opening a drive thru and figure
+                    things out. Thats where we developed the Sushi Burrito concept in our style based on reditions of previous rolls I had created at 2nd Street Sushi. My dream is
+                    to open a chain of Sushi Burrito shops that focus on sustainability and use of ingredients found locally, while providing a workplace that promotes individuality
+                    and a sense of pride for serving healthy delicious alternative to traditional "fast Food".
+                    <br/>
+                    <br />
+                    - Toby
+                </p>
             </div>
         </div>
-    </section>
+</section>
 
-    <section id="register">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Register and let your voice be heard</h2>
-                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
+    <section id="contactus">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-subheading text-muted">Find us on Facebook, google+ and Yelp!</h3>
+                </div>
             </div>
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Register and let your voice be heard</h2>
-                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.8668906578364!2d-122.96272399999997!3d44.044805000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54c0e09298197f29%3A0x22ed37bf2bb80180!2sUnami!5e0!3m2!1sen!2sus!4v1433109653033" width="400" height="300" frameborder="0" style="border:0"></iframe>
+                </div>
+                <div class="col-md-4">
+                    
+                        <ul class="list-inline social-buttons">
+                            <li>
+                                <a href="https://www.facebook.com/pages/Unami-Sushi-Asian-Grill/194341314056531" class="contactbutton"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/112471840451352098026/about?gl=us&hl=en" class="contactbutton"><i class="fa fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="http://www.yelp.com/biz/unami-springfield" class="contactbutton"><i class="fa fa-yelp"></i></a>
+                            </li>
+                        </ul>
+                   
+                </div>
+
+                <div class="col-md-4">
+                    <div id='yelpwidget'></div>
+                </div>
             </div>
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Register and let your voice be heard</h2>
-                <h3 class="section-subheading text-muted">WIP!: Register and give us your opinion, praise and critiques welcome</h3>
-            </div>
+
         </div>
     </section>
 </body>
 </html>
+<script>(function() { var s = document.createElement("script");s.async = true;s.onload = s.onreadystatechange = function(){getYelpWidget("unami-springfield","300","WHT","y","y","1");};s.src='http://chrisawren.com/widgets/yelp/yelpv2.js' ;var x = document.getElementsByTagName('script')[0];x.parentNode.insertBefore(s, x);})();</script>
