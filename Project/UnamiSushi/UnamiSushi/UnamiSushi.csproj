@@ -159,13 +159,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CommentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MenuCategoryController.cs" />
     <Compile Include="Controllers\MenuItemController.cs" />
     <Compile Include="Controllers\MenuPictureController.cs" />
-    <Compile Include="Controllers\ReplyController.cs" />
     <Compile Include="Controllers\SubcategoryController.cs" />
     <Compile Include="DAL\PrimaryContext.cs" />
     <Compile Include="DAL\PrototypeInitializer.cs" />
@@ -176,16 +174,18 @@
     <Compile Include="Migrations\201505242030380_InitialCreate.Designer.cs">
       <DependentUpon>201505242030380_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201506030628505_Remove_comments_replies.cs" />
+    <Compile Include="Migrations\201506030628505_Remove_comments_replies.Designer.cs">
+      <DependentUpon>201506030628505_Remove_comments_replies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MenuCategory.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\MenuPicture.cs" />
     <Compile Include="Models\MenuViewModel.cs" />
-    <Compile Include="Models\Reply.cs" />
     <Compile Include="Models\Subcategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -358,41 +358,32 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\MenuCategory\Delete.cshtml" />
     <Content Include="Views\MenuCategory\Details.cshtml" />
+    <Content Include="Views\MenuItem\Details.cshtml" />
+    <Content Include="Views\MenuPicture\Create.cshtml" />
+    <Content Include="Views\Home\Menu.cshtml" />
+    <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Shared\Menu_Layout.cshtml" />
+    <Content Include="Views\Shared\Standard_Layout.cshtml" />
+    <Content Include="Views\Shared\Home_Layout.cshtml" />
+    <Content Include="Views\Home\Admin.cshtml" />
+    <Content Include="Views\MenuCategory\Create.cshtml" />
+    <Content Include="Views\MenuCategory\Delete.cshtml" />
     <Content Include="Views\MenuCategory\Edit.cshtml" />
     <Content Include="Views\MenuCategory\Index.cshtml" />
+    <Content Include="Views\MenuPicture\Index.cshtml" />
+    <Content Include="Views\MenuItem\Index.cshtml" />
+    <Content Include="Views\Subcategory\Index.cshtml" />
     <Content Include="Views\MenuItem\Create.cshtml" />
     <Content Include="Views\MenuItem\Delete.cshtml" />
-    <Content Include="Views\MenuItem\Details.cshtml" />
     <Content Include="Views\MenuItem\Edit.cshtml" />
-    <Content Include="Views\MenuItem\Index.cshtml" />
-    <Content Include="Views\MenuPicture\Create.cshtml" />
     <Content Include="Views\MenuPicture\Delete.cshtml" />
     <Content Include="Views\MenuPicture\Details.cshtml" />
     <Content Include="Views\MenuPicture\Edit.cshtml" />
-    <Content Include="Views\MenuPicture\Index.cshtml" />
-    <Content Include="Views\Comment\Create.cshtml" />
-    <Content Include="Views\Comment\Delete.cshtml" />
-    <Content Include="Views\Comment\Details.cshtml" />
-    <Content Include="Views\Comment\Edit.cshtml" />
-    <Content Include="Views\Comment\Index.cshtml" />
-    <Content Include="Views\Reply\Create.cshtml" />
-    <Content Include="Views\Reply\Delete.cshtml" />
-    <Content Include="Views\Reply\Details.cshtml" />
-    <Content Include="Views\Reply\Edit.cshtml" />
-    <Content Include="Views\Reply\Index.cshtml" />
-    <Content Include="Views\Home\Menu.cshtml" />
-    <Content Include="Views\Home\Details.cshtml" />
-    <Content Include="Views\MenuCategory\Create.cshtml" />
     <Content Include="Views\Subcategory\Create.cshtml" />
     <Content Include="Views\Subcategory\Delete.cshtml" />
     <Content Include="Views\Subcategory\Details.cshtml" />
     <Content Include="Views\Subcategory\Edit.cshtml" />
-    <Content Include="Views\Subcategory\Index.cshtml" />
-    <Content Include="Views\Shared\Menu_Layout.cshtml" />
-    <Content Include="Views\Shared\Standard_Layout.cshtml" />
-    <Content Include="Views\Shared\Home_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -407,6 +398,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505242030380_InitialCreate.resx">
       <DependentUpon>201505242030380_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201506030628505_Remove_comments_replies.resx">
+      <DependentUpon>201506030628505_Remove_comments_replies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

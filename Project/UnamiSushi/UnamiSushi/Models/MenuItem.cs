@@ -30,9 +30,5 @@ namespace UnamiSushi.Models
 
 
         public virtual ICollection<MenuPicture> MenuPictures { get; set; }
-
-        public virtual ICollection<Comment> ItemComments { get; set; }
-
-
     }
 }

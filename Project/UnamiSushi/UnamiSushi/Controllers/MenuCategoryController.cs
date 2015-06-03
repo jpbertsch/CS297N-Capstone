@@ -36,7 +36,7 @@ namespace UnamiSushi.Controllers
             //MenuCategory menuCategory = db.MenuCategories.Find()
 
             //var MenuCategories = db.MenuCategories.Include(i => i.MenuItems.Select(x => x.ItemGallery.Select(y => y.PicturePathname)));
-            var menuCategories = db.MenuCategories.Include("MenuItems.MenuPictures");
+            var menuCategories = db.MenuCategories.Include("SubCategories.MenuItems.MenuPictures");
             var itemGallery = db.MenuItems.First().MenuPictures;
             //var MenuCategories = db.MenuCategories.Include();
 

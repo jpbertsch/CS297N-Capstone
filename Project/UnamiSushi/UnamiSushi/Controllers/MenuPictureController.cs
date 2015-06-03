@@ -39,6 +39,8 @@ namespace UnamiSushi.Controllers
         // GET: MenuPicture/Create
         public ActionResult Create()
         {
+            ViewBag.MenuItemID = new SelectList(db.MenuItems, "MenuItemID", "MenuItemName");
+
             return View();
         }
 
