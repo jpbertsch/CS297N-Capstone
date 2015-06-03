@@ -373,7 +373,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        padding-top: 100px 0;
     }
 }
 
@@ -956,6 +956,12 @@ body {
         align-content:center;
     }
 
+    img.foodIcon {
+        width: 16px;
+        height: 16px;
+        display: normal;
+    }
+
     /*td:before {
         content: attr(data-title);
         white-space: pre;
@@ -1022,6 +1028,12 @@ body {
         align-content:center;
     }
 
+    img.foodIcon {
+        width: 32px;
+        height: 32px;
+        display: normal;
+    }
+
     /*td:before {
         content: attr(data-title);
         white-space: pre;
@@ -1063,6 +1075,13 @@ body {
         float: none;
         align-content:center;
     }
+
+    img.foodIcon {
+        width: 32px;
+        height: 32px;
+        display: normal;
+    }
+}
 
     /*td:before {
         content: attr(data-title);
@@ -1188,3 +1207,4 @@ body {
 #upper-nav-bar ul li a:hover{
     color: #5292D1; 
 }
+

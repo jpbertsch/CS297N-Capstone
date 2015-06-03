@@ -3,8 +3,8 @@
         @if (Model != null)
         {
             <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
-            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Raw</h4>
-            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">= Vegetarian</h4>
+            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Raw</h4>
+            <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Vegetarian</h4>
 
             <br />
             <br />
@@ -69,7 +69,7 @@
                                     <td>
                                         @if (menuItem.Vegetarian == true)
                                         {
-                                            <img src="@Url.Content("~/Content/VegetarianSymbol.png")" alt="Vegetarian">
+                                            <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">
                                         }
                                     </td>
 
