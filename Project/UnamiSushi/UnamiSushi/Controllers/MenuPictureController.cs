@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -49,10 +50,26 @@ namespace UnamiSushi.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PictureID,PictureItem,PicturePathname,ThumbnailPathname")] MenuPicture menuPicture)
+        public ActionResult Create([Bind(Include = "MenuItemID,PicturePathname,ThumbnailPathname")] MenuPicture menuPicture, HttpPostedFileBase file1, HttpPostedFileBase file2)
         {
             if (ModelState.IsValid)
             {
+
+            //    file1.SaveAs(HttpContext.Server.MapPath("~/Photos/Normal"));
+            //    file2.SaveAs(HttpContext.Server.MapPath("~/Photos/Normal"));
+
+                var FileName1 = Path.GetFileName(file1.FileName);
+                var path1 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName1);
+
+                var FileName2 = Path.GetFileName(file2.FileName);
+                var path2 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName2);
+
+                file1.SaveAs(path1);
+                file2.SaveAs(path2);
+
+                menuPicture.PicturePathname = path1;
+                menuPicture.ThumbnailPathname = path2;
+
                 db.MenuPictures.Add(menuPicture);
                 db.SaveChanges();
                 return RedirectToAction("Index");
