@@ -8,20 +8,6 @@ namespace UnamiSushi.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Comment",
-                c => new
-                    {
-                        CommentID = c.Int(nullable: false, identity: true),
-                        MenuItemID = c.Int(nullable: false),
-                        UserID = c.Int(nullable: false),
-                        CommentDate = c.DateTime(nullable: false),
-                        CommentContents = c.String(),
-                    })
-                .PrimaryKey(t => t.CommentID)
-                .ForeignKey("dbo.MenuItem", t => t.MenuItemID, cascadeDelete: true)
-                .Index(t => t.MenuItemID);
-            
-            CreateTable(
                 "dbo.MenuCategory",
                 c => new
                     {
@@ -74,18 +60,6 @@ namespace UnamiSushi.Migrations
                 .ForeignKey("dbo.MenuItem", t => t.MenuItemID, cascadeDelete: true)
                 .Index(t => t.MenuItemID);
             
-            CreateTable(
-                "dbo.Reply",
-                c => new
-                    {
-                        ReplyID = c.Int(nullable: false, identity: true),
-                        CommentID = c.Int(nullable: false),
-                        UserID = c.Int(nullable: false),
-                        CommentDate = c.DateTime(nullable: false),
-                        CommentContents = c.String(),
-                    })
-                .PrimaryKey(t => t.ReplyID);
-            
         }
         
         public override void Down()
@@ -93,17 +67,13 @@ namespace UnamiSushi.Migrations
             DropForeignKey("dbo.Subcategory", "CategoryID", "dbo.MenuCategory");
             DropForeignKey("dbo.MenuItem", "SubcategoryID", "dbo.Subcategory");
             DropForeignKey("dbo.MenuPicture", "MenuItemID", "dbo.MenuItem");
-            DropForeignKey("dbo.Comment", "MenuItemID", "dbo.MenuItem");
             DropIndex("dbo.MenuPicture", new[] { "MenuItemID" });
             DropIndex("dbo.MenuItem", new[] { "SubcategoryID" });
             DropIndex("dbo.Subcategory", new[] { "CategoryID" });
-            DropIndex("dbo.Comment", new[] { "MenuItemID" });
-            DropTable("dbo.Reply");
             DropTable("dbo.MenuPicture");
             DropTable("dbo.MenuItem");
             DropTable("dbo.Subcategory");
             DropTable("dbo.MenuCategory");
-            DropTable("dbo.Comment");
         }
     }
 }

@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Create";
+    Layout = null;
 }
 
 <h2>Create</h2>
@@ -16,10 +17,10 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.PictureItem, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.MenuItemID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PictureItem, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.PictureItem, "", new { @class = "text-danger" })
+                @Html.DropDownList("MenuItemID", ViewBag.MenuItemID as SelectList, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PictureID, "", new { @class = "text-danger" })
             </div>
         </div>
 
