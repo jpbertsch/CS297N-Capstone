@@ -666,7 +666,7 @@ section h3.section-subheading {
 
 .team-member img {
     margin: 0 auto;
-    border: 7px solid #fff;
+    border: 5px solid limegreen;
 }
 
 .team-member h4 {
@@ -785,6 +785,7 @@ ul.social-buttons li a {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+     
 }
 
 ul.social-buttons li a:hover{
@@ -911,6 +912,18 @@ body {
         /*transform: scale(.5,.5);  /* Standard syntax */
     }
 
+    iframe{
+        display:none;
+    }
+    
+    #yelpwidget.yelp{
+        display:none;
+    }
+
+    .col-md-4{
+        padding-right:-30px;
+    }
+
     section{
         padding-top: 10px;
     }
@@ -963,6 +976,18 @@ body {
         /*-ms-transform: scale(.5,.5);  IE 9 */
         /*-webkit-transform: scale(.5,.5);  Safari */
         /*transform: scale(.5,.5);  /* Standard syntax */
+    }
+
+    iframe{
+        display:none;
+    }
+    
+    #yelpwidget.yelp{
+        display:none;
+    }
+
+    .col-md-4{
+        padding-right:-30px;
     }
 
     section{

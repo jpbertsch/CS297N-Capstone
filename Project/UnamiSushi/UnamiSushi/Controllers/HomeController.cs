@@ -16,7 +16,12 @@ namespace UnamiSushi.Controllers
         {
             return View();
         }
-        
+
+        public ActionResult Admin()
+        {
+            return View();
+        }
+
         public ActionResult Menu()
         {
             return View(db.MenuCategories);

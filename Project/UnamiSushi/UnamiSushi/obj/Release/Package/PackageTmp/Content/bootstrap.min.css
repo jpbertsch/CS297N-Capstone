@@ -1670,6 +1670,8 @@ ol, ul {
         display: inline-block;
         padding-right: 5px;
         padding-left: 5px;
+        padding-top:25px;
+        padding-bottom:25px;
     }
 
 dl {
@@ -2318,6 +2320,7 @@ pre {
 
     .col-md-4 {
         width: 33.33333333%;
+        padding-right:45px;
     }
 
     .col-md-3 {
