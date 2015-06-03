@@ -373,7 +373,7 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding-top: 100px 0;
+        padding: 100px 0;
     }
 }
 
@@ -912,18 +912,6 @@ body {
         /*transform: scale(.5,.5);  /* Standard syntax */
     }
 
-    iframe{
-        display:none;
-    }
-    
-    #yelpwidget.yelp{
-        display:none;
-    }
-
-    .col-md-4{
-        padding-right:-30px;
-    }
-
     section{
         padding-top: 10px;
     }
@@ -954,12 +942,6 @@ body {
     img{
         float: none;
         align-content:center;
-    }
-
-    img.foodIcon {
-        width: 16px;
-        height: 16px;
-        display: normal;
     }
 
     /*td:before {
@@ -984,18 +966,6 @@ body {
         /*transform: scale(.5,.5);  /* Standard syntax */
     }
 
-    iframe{
-        display:none;
-    }
-    
-    #yelpwidget.yelp{
-        display:none;
-    }
-
-    .col-md-4{
-        padding-right:-30px;
-    }
-
     section{
         padding-top: 10px;
     }
@@ -1026,12 +996,6 @@ body {
     img{
         float: none;
         align-content:center;
-    }
-
-    img.foodIcon {
-        width: 32px;
-        height: 32px;
-        display: normal;
     }
 
     /*td:before {
@@ -1075,13 +1039,6 @@ body {
         float: none;
         align-content:center;
     }
-
-    img.foodIcon {
-        width: 32px;
-        height: 32px;
-        display: normal;
-    }
-}
 
     /*td:before {
         content: attr(data-title);
@@ -1207,4 +1164,3 @@ body {
 #upper-nav-bar ul li a:hover{
     color: #5292D1; 
 }
-
