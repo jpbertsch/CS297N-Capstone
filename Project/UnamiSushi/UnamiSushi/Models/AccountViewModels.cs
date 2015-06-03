@@ -64,6 +64,9 @@ namespace UnamiSushi.Models
 
     public class RegisterViewModel
     {
+        [Display(Name = "Role" )]
+        public string Name { get; set; }// will be used to assign the user a role when registrating
+ 
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

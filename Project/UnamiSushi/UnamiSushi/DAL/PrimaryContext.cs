@@ -14,6 +14,7 @@ namespace UnamiSushi.DAL
         public PrimaryContext() : base("PrimaryContext")
         { }
 
+
         public DbSet<MenuCategory> MenuCategories { get; set;}
         public DbSet<Subcategory> Subcategories { get; set; }
         public DbSet<MenuItem> MenuItems { get; set; }
@@ -22,7 +23,7 @@ namespace UnamiSushi.DAL
         //public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<Comment> Comments { get; set; }
         
-        //public DbSet<Administrator> Administrators { get; set; }
+        //public DbSet<IdentityRoles> Administrators { get; set; }
         public DbSet<Reply> Replies { get; set; }
 
         // Dbset for users?
