@@ -223,3 +223,6 @@ C:\Users\Jacob\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\ob
 C:\Users\Jacob\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.csproj.GenerateResource.Cache
 C:\Users\Jacob\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.Migrations.Remove_comments_replies.resources
 C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.Migrations.Remove_comments_replies.resources
+C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.Migrations.InitialCreate.resources
+C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.csproj.GenerateResource.Cache
+C:\Users\nwtech\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Debug\UnamiSushi.Migrations._06032015.resources

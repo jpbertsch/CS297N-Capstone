@@ -50,7 +50,7 @@ namespace UnamiSushi.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MenuItemID,PicturePathname,ThumbnailPathname")] MenuPicture menuPicture, HttpPostedFileBase file1, HttpPostedFileBase file2)
+        public ActionResult Create([Bind(Include = "MenuItemID, PictureName")] MenuPicture menuPicture, HttpPostedFileBase file1, HttpPostedFileBase file2, string PictureName)
         {
             if (ModelState.IsValid)
             {
@@ -58,14 +58,36 @@ namespace UnamiSushi.Controllers
             //    file1.SaveAs(HttpContext.Server.MapPath("~/Photos/Normal"));
             //    file2.SaveAs(HttpContext.Server.MapPath("~/Photos/Normal"));
 
-                var FileName1 = Path.GetFileName(file1.FileName);
-                var path1 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName1);
+                var File1 = Path.GetFileName(file1.FileName);
+                var FileName1 = Path.GetFileNameWithoutExtension(file1.FileName);
+                string FileType1 = Path.GetExtension(File1);
 
-                var FileName2 = Path.GetFileName(file2.FileName);
-                var path2 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName2);
+                //string FullName1 = FileName1 + FileType1;
+                string FullName1 = PictureName + FileType1;
 
-                file1.SaveAs(path1);
-                file2.SaveAs(path2);
+                //var path1 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName1, FileType1);
+
+                string path1 = "~/Photos/Normal/" + FullName1;
+
+
+
+                var File2 = Path.GetFileName(file2.FileName);
+                var FileName2 = Path.GetFileNameWithoutExtension(file2.FileName);
+                string FileType2 = Path.GetExtension(File2);
+
+                //string FullName2 = FileName2 + "Thumb" + FileType2;
+                string FullName2 = PictureName + "Thumb" + FileType2;
+
+                //var path2 = Path.Combine(HttpContext.Server.MapPath("~/Photos/Normal"), FileName2, "Thumb", FileType2);
+
+                string path2 = "~/Photos/Normal/" + FullName2;
+
+
+
+                file1.SaveAs(HttpContext.Server.MapPath(path1));
+                file2.SaveAs(HttpContext.Server.MapPath(path2));
+
+
 
                 menuPicture.PicturePathname = path1;
                 menuPicture.ThumbnailPathname = path2;
