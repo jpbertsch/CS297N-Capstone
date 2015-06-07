@@ -11,7 +11,7 @@ namespace UnamiSushi.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(UnamiSushi.DAL.PrimaryContext context)

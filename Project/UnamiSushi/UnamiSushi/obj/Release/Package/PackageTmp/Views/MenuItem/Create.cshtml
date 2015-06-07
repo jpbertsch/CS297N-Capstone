@@ -2,16 +2,20 @@
 
 @{
     Layout = null;
-    Layout = "~/Views/Shared/Standard_Layout.cshtml";
 }
 
 <!DOCTYPE html>
 
-<section>
-    @using (Html.BeginForm())
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm()) 
     {
         @Html.AntiForgeryToken()
-
+        
         <div class="form-horizontal">
             <h4>MenuItem</h4>
             <hr />
@@ -23,7 +27,7 @@
                     @Html.ValidationMessageFor(model => model.SubcategoryID, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.MenuItemName, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -31,7 +35,7 @@
                     @Html.ValidationMessageFor(model => model.MenuItemName, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.Piece, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -39,7 +43,7 @@
                     @Html.ValidationMessageFor(model => model.Piece, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.Cooked, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -49,7 +53,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.Vegetarian, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -59,7 +63,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.MenuItemDescription, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -67,7 +71,7 @@
                     @Html.ValidationMessageFor(model => model.MenuItemDescription, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+    
             <div class="form-group">
                 @Html.LabelFor(model => model.MenuItemPrice, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -75,7 +79,7 @@
                     @Html.ValidationMessageFor(model => model.MenuItemPrice, "", new { @class = "text-danger" })
                 </div>
             </div>
-
+    
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Create" class="btn btn-default" />
@@ -83,8 +87,9 @@
             </div>
         </div>
     }
-
+    
     <div>
         @Html.ActionLink("Back to List", "Index")
     </div>
-</section>
+</body>
+</html>

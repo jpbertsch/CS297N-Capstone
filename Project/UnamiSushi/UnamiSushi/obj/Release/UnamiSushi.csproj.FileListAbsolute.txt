@@ -55,3 +55,4 @@ C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\
 C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Release\UnamiSushi.csproj.GenerateResource.Cache
 C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Release\UnamiSushi.dll
 C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Release\UnamiSushi.pdb
+C:\Users\waffles\Documents\GitHub\CS297N-Capstone\Project\UnamiSushi\UnamiSushi\obj\Release\UnamiSushi.Migrations._06032015.resources

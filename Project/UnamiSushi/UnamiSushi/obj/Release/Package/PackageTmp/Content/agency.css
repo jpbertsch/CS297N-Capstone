@@ -912,18 +912,6 @@ body {
         /*transform: scale(.5,.5);  /* Standard syntax */
     }
 
-    iframe{
-        display:none;
-    }
-    
-    #yelpwidget.yelp{
-        display:none;
-    }
-
-    .col-md-4{
-        padding-right:-30px;
-    }
-
     section{
         padding-top: 10px;
     }
@@ -976,18 +964,6 @@ body {
         /*-ms-transform: scale(.5,.5);  IE 9 */
         /*-webkit-transform: scale(.5,.5);  Safari */
         /*transform: scale(.5,.5);  /* Standard syntax */
-    }
-
-    iframe{
-        display:none;
-    }
-    
-    #yelpwidget.yelp{
-        display:none;
-    }
-
-    .col-md-4{
-        padding-right:-30px;
     }
 
     section{
