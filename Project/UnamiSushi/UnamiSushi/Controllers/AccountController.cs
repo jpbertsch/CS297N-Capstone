@@ -141,7 +141,7 @@ namespace UnamiSushi.Controllers
 
         //
         // GET: /Account/Register
-        [AllowAnonymous]
+        [Authorize(Roles="Admin")]
         public ActionResult Register()
         {
             ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
@@ -151,7 +151,8 @@ namespace UnamiSushi.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [AllowAnonymous]
+       // [AllowAnonymous]
+        [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -398,6 +399,7 @@ namespace UnamiSushi.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
+            //AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
         }
 

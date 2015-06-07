@@ -51,7 +51,7 @@ namespace UnamiSushi.Migrations
             var menuItems = new List<MenuItem>
             {
                 // Classic Sushidos
-                new MenuItem{MenuItemID=1, SubcategoryID=1, MenuItemName="Califronia", Piece=0, Cooked=true, Vegetarian=false,
+                new MenuItem{MenuItemID=1, SubcategoryID=1, MenuItemName="California", Piece=0, Cooked=true, Vegetarian=false,
                 MenuItemDescription="Surimi crab, avocado, cream cheese, cucumber, tempura flakes, carrot, seaweed salad, sweet soy reduction",
                 MenuItemPrice= 8.95},
                 new MenuItem{MenuItemID=2, SubcategoryID=1, MenuItemName="Neptune", Piece=0, Cooked=true, Vegetarian=false, 
