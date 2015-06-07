@@ -16,12 +16,14 @@ namespace UnamiSushi.Controllers
         private PrimaryContext db = new PrimaryContext();
 
         // GET: MenuItem
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View(db.MenuItems.ToList());
         }
 
         // GET: MenuItem/Details/5
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             if (id == null)

@@ -12,6 +12,7 @@ namespace UnamiSushi.Controllers
     public class HomeController : Controller
     {
         private PrimaryContext db = new PrimaryContext();
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -22,51 +23,14 @@ namespace UnamiSushi.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public ActionResult Menu()
         {
             return View(db.MenuCategories);
         }
 
-
-        public ActionResult SushidoPV()
-        {
-            //MenuViewModel menuVM = new MenuViewModel();
-            //// query a category
-            //var aCategory = (from c in db.MenuCategories
-            //                 where c.CategoryName == "Sushi Burrito"
-            //                 select c).FirstOrDefault<MenuCategory>();
-            //var resultCategory = aCategory.CategoryName.ToString();
-
-            //menuVM.CategoryName = resultCategory;// populating the data into burritoVM
-            //foreach (var item in resultCategory)
-            //{
-            //    var menuItems = (from m in db.MenuItems
-            //                     where m.CategoryName == "Sushi Burrito"
-            //                     select m.MenuItemName).ToList();
-            //    menuVM.MenuItemName = menuItems;
-            //}
-
-            //List<MenuViewModel> viewModelList = new List<MenuViewModel>();
-            //viewModelList.Add(menuVM);
-
-            return View();
-        }
-
-        public ActionResult SushiRollsPV()
-        {
-            return View();
-        }
-        public ActionResult AppetizersPV()
-        {
-            return View();
-        }
-        public ActionResult AsianGrillPV()
-        {
-            return View();
-        }
-
         // GET: MenuCategory/Details/5
-
+        [AllowAnonymous]
         public ActionResult Details(int? id)
         {
             //if (id == null)
@@ -97,6 +61,7 @@ namespace UnamiSushi.Controllers
         }
 
         [ChildActionOnly]
+        [AllowAnonymous]
         public ActionResult CategoryPartialDetails(int? id)
         {
             var model = db.MenuCategories.Find(id);
