@@ -5,43 +5,48 @@
 <div style="visibility: visible;">
     @if (Model != null)
     {
-        <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+        <div class="col-md-5" id="mobile">
+            <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
+        </div>
+    <div class="col-md-3" id="mobile">
         <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Raw</h4>
+    </div>
+    <div class="col-md-3" id="mobile">
         <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Vegetarian</h4>
-
-        <br />
-        <br />
-        <br />
-        <br />
+    </div>
+                                <br />
+                    <br />
+                    <br />
+                    <br />
 
         foreach (var subCat in Model.Subcategories)
-        {
-            <div class="grid" style="padding-top: 5px;">
-                <table cellspacing=" 0" width="100%">
-                    <thead>
-                        <tr>
-                            <th style="width: 250px;">
-                                @subCat.SubcategoryName
-                            </th>
-                            <th style="width: 180px;">
-                                Name
-                            </th>
-                            <th>
-                                @*Spacing for symbols*@
-                            </th>
-                            <th style="width: 600px;">
-                                Description
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var menuItem in subCat.MenuItems)
+                    {
+                    <div class="grid" style="padding-top: 5px;">
+                        <table cellspacing=" 0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th style="width: 250px;">
+                                        @subCat.SubcategoryName
+                                    </th>
+                                    <th style="width: 180px;">
+                                        Name
+                                    </th>
+                                    <th>
+                                        @*Spacing for symbols*@
+                                    </th>
+                                    <th style="width: 600px;">
+                                        Description
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var menuItem in subCat.MenuItems)
                         {
-                            <tr>
+                                    <tr>
 
-                                <td align="left">
+                                        <td align="left">
 
-                                    @{
+                                            @{
                             string imageString;
 
                             if (menuItem.MenuPictures.Count > 0)
@@ -58,32 +63,32 @@
                             </a>
 
 
-                                    }
-                                </td>
+                                            }
+                                        </td>
 
-                                <td data-title="Name" align="left">
-                                    @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
+                                        <td data-title="Name" align="left">
+                                            @*@Html.ActionLink(menuItem.MenuItemName, "Details", "MenuItem", new { id = menuItem.MenuItemID }, null)*@
 
-                                    <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                        @menuItem.MenuItemName
-                                    </a>
-                                </td>
+                                            <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                                @menuItem.MenuItemName
+                                            </a>
+                                        </td>
 
-                                <td>
-                                    @if (menuItem.Vegetarian == true)
+                                        <td>
+                                            @if (menuItem.Vegetarian == true)
                                     {
-                                        <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">
+                                                <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">
                                     }
-                                </td>
+                                        </td>
 
-                                <td title="Description" align="left">
-                                    @menuItem.MenuItemDescription
-                                </td>
-                            </tr>
+                                        <td title="Description" align="left">
+                                            @menuItem.MenuItemDescription
+                                        </td>
+                                    </tr>
                         }
-                    </tbody>
-                </table>
-            </div>
-        }
-    }
-</div>
+                            </tbody>
+                        </table>
+                    </div>
+                    }
+                    }
+                </div>

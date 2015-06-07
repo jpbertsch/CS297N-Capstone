@@ -79,7 +79,7 @@ namespace UnamiSushi.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Admin", "Home");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -89,6 +89,7 @@ namespace UnamiSushi.Controllers
                     ModelState.AddModelError("", "Invalid login attempt.");
                     return View(model);
             }
+            
         }
 
         //
@@ -142,6 +143,8 @@ namespace UnamiSushi.Controllers
         //
         // GET: /Account/Register
         [Authorize(Roles="Admin")]
+        
+        
         public ActionResult Register()
         {
             ViewBag.Name = new SelectList(context.Roles.ToList(), "Name", "Name");
@@ -153,6 +156,7 @@ namespace UnamiSushi.Controllers
         [HttpPost]
        // [AllowAnonymous]
         [Authorize(Roles = "Admin")]
+        
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {

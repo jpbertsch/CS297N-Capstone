@@ -305,6 +305,20 @@ header {
     
 }
 
+header.menuheader {
+    height:300px;
+    text-align: center;
+    color: #fff;
+    background-attachment: scroll;
+    background-image: url(../Photos/Normal/SushiRoll2.JPG);
+    background-position: center center;
+    background-repeat: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    
+}
 header .intro-text {
     padding-top: 100px;
     padding-bottom: 50px;
@@ -906,10 +920,17 @@ body {
 
 @media (max-width: 320px) {
     h4{
-        /*display:none;*/
+        display:none;
         /*-ms-transform: scale(.5,.5);  IE 9 */
         /*-webkit-transform: scale(.5,.5);  Safari */
         /*transform: scale(.5,.5);  /* Standard syntax */
+    }
+
+    h2.section-heading{
+        text-align: center;
+        -ms-transform: scale(.7,.7);  /*IE 9 */
+        -webkit-transform: scale(.7,.7);  /*Safari */
+        transform: scale(.7,.7);  /* Standard syntax */
     }
 
     section{
@@ -960,10 +981,17 @@ body {
 
 @media (max-width: 480px) {
     h4{
-        /*display:none;*/
+        display:none;
         /*-ms-transform: scale(.5,.5);  IE 9 */
         /*-webkit-transform: scale(.5,.5);  Safari */
         /*transform: scale(.5,.5);  /* Standard syntax */
+    }
+
+    h2.section-heading{
+        
+         /*-ms-transform: scale(.8,.8); IE 9 */
+         /*-webkit-transform: scale(.8,.8);  /*Safari */
+         /*transform: scale(.8,.8);  /* Standard syntax */
     }
 
     section{
@@ -1014,9 +1042,23 @@ body {
 
 
 @media (max-width: 768px) {
-    /*h4{
-        display:none;
-    }*/
+    h4{
+        
+        -ms-transform: scale(.7,.7);  /*IE 9 */
+        -webkit-transform: scale(.7,.7);  /*Safari */
+        transform: scale(.7,.7);  /* Standard syntax */
+    }
+
+    #mobile.col-md-5{
+        -ms-transform: scale(.7,.7);  /*IE 9 */
+        -webkit-transform: scale(.7,.7);  /*Safari */
+        transform: scale(.7,.7);  /* Standard syntax */
+        width:400px;
+    }
+    #mobile.col-md-3{
+        width:300px;
+        float:right;
+    }
 
     thread {
         display: none;
