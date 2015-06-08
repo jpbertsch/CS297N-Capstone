@@ -8,13 +8,16 @@
         <div class="col-md-5" id="mobile">
             <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
         </div>
-    <div class="col-md-2" id="mobile">
+    <div class="col-md-2" id="mobile" style="float: right;">
         <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/RawSymbol.png")" class="foodIcon" alt="Vegetarian">Raw</h4>
     </div>
-    <div class="col-md-3" id="mobile">
-        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">Vegetarian</h4>
+    <div class="col-md-3" id="mobile" style="float: right;">
+                <h4 class=" section-heading" style="float: right; padding-right: 30px; color:black;">
+        <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">Vegetarian</h4>
     </div>
-                                <br />
+
+
+                    <br />
                     <br />
                     <br />
                     <br />
@@ -24,7 +27,7 @@
                     <div class="grid"  style="padding-top: 5px;">
                         <table class="menurow" cellspacing=" 0" width="100%">
                             <thead>
-                                <tr style="border-bottom: 2px solid black;">
+                                <tr>
                                     <th style="width: 250px;">
                                         @subCat.SubcategoryName
                                     </th>
@@ -88,6 +91,7 @@
 
                                         <td title="Description" align="left">
                                             @menuItem.MenuItemDescription
+
                                         </td>
                                     </tr>
                                 }
