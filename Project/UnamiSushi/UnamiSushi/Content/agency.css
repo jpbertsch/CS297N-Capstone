@@ -919,8 +919,8 @@ body {
 }
 
 @media (max-width: 320px) {
-    h4{
-        
+    h4.section-heading{
+        display:none;
     }
 
     h2.section-heading{
@@ -985,8 +985,8 @@ body {
 }
 
 @media (max-width: 480px) {
-    h4{
-        
+     h4.section-heading{
+        display:none;
     }
 
     h2.section-heading{

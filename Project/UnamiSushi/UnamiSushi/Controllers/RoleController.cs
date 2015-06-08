@@ -39,7 +39,7 @@ namespace UnamiSushi.Controllers
         {
             context.Roles.Add(Role);
             context.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Admin", "Home");
         }
 
     }
