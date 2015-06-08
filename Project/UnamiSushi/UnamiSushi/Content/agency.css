@@ -1050,13 +1050,17 @@ body {
     }
 
     #mobile.col-md-5{
-        -ms-transform: scale(.7,.7);  /*IE 9 */
-        -webkit-transform: scale(.7,.7);  /*Safari */
-        transform: scale(.7,.7);  /* Standard syntax */
+        /*-ms-transform: scale(.7,.7);  /*IE 9 */
+        /*-webkit-transform: scale(.7,.7);  /*Safari */
+        /*transform: scale(.7,.7);  /* Standard syntax */
         width:400px;
     }
     #mobile.col-md-3{
-        width:300px;
+        width:200px;
+        float:right;
+    }
+    #mobile.col-md-2{
+        width:100px;
         float:right;
     }
 
@@ -1206,3 +1210,7 @@ body {
 #upper-nav-bar ul li a:hover{
     color: #5292D1; 
 }
+
+/*.menurow thead:nth-child(even){
+    background-color: rgb(225, 255, 225);
+}*/

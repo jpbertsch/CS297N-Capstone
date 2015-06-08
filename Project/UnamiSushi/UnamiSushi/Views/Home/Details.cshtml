@@ -8,11 +8,11 @@
         <div class="col-md-5" id="mobile">
             <h2 class="section-heading" style="float: left; font-family: Kaushan Script,Helvetica Neue,Helvetica,Arial,cursive; color:limegreen;">@Model.CategoryName</h2>
         </div>
-    <div class="col-md-3" id="mobile">
-        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Raw</h4>
+    <div class="col-md-2" id="mobile">
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/RawSymbol.png")" class="foodIcon" alt="Vegetarian">Raw</h4>
     </div>
     <div class="col-md-3" id="mobile">
-        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">= Vegetarian</h4>
+        <h4 class="section-heading" style="float: right; padding-right: 30px; color:black;"><img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">Vegetarian</h4>
     </div>
                                 <br />
                     <br />
@@ -21,10 +21,10 @@
 
         foreach (var subCat in Model.Subcategories)
                     {
-                    <div class="grid" style="padding-top: 5px;">
-                        <table cellspacing=" 0" width="100%">
+                    <div class="grid"  style="padding-top: 5px;">
+                        <table class="menurow" cellspacing=" 0" width="100%">
                             <thead>
-                                <tr>
+                                <tr style="border-bottom: 2px solid black;">
                                     <th style="width: 250px;">
                                         @subCat.SubcategoryName
                                     </th>
@@ -39,28 +39,28 @@
                                     </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody >
                                 @foreach (var menuItem in subCat.MenuItems)
-                        {
-                                    <tr>
+                                {
+                                    <tr style="border-bottom: 2px solid rgb(225, 255, 225);">
 
                                         <td align="left">
 
                                             @{
-                            string imageString;
+                                    string imageString;
 
-                            if (menuItem.MenuPictures.Count > 0)
-                            {
-                                var menuPictures = (ICollection<UnamiSushi.Models.MenuPicture>)menuItem.MenuPictures;
-                                imageString = menuPictures.FirstOrDefault().ThumbnailPathname;
-                            }
-                            else
-                            { imageString = "/Photos/Normal/MissingThumb.PNG"; }
+                                    if (menuItem.MenuPictures.Count > 0)
+                                    {
+                                        var menuPictures = (ICollection<UnamiSushi.Models.MenuPicture>)menuItem.MenuPictures;
+                                        imageString = menuPictures.FirstOrDefault().ThumbnailPathname;
+                                    }
+                                    else
+                                    { imageString = "/Photos/Normal/MissingThumb.PNG"; }
 
 
-                            <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
-                                <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;border-radius:25px;" />
-                            </a>
+                                    <a href="@Url.Action("Details", "MenuItem", new { id = menuItem.MenuItemID })">
+                                        <img src="@Url.Content(imageString)" alt="image" width="200" height="150" style="padding-bottom: 10px;border-radius:25px;" />
+                                    </a>
 
 
                                             }
@@ -76,16 +76,21 @@
 
                                         <td>
                                             @if (menuItem.Vegetarian == true)
-                                    {
+                                            {
                                                 <img src="@Url.Content("~/Content/VegetarianSymbol.png")" class="foodIcon" alt="Vegetarian">
-                                    }
+                                            }
+
+                                            @if (menuItem.Cooked == false)
+                                            {
+                                                <img src="@Url.Content("~/Content/RawSymbol.png")" class="foodIcon" alt="Raw">
+                                            }
                                         </td>
 
                                         <td title="Description" align="left">
                                             @menuItem.MenuItemDescription
                                         </td>
                                     </tr>
-                        }
+                                }
                             </tbody>
                         </table>
                     </div>
